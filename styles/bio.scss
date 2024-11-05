@@ -1,0 +1,18 @@
+
+
+.hero {
+    background-image: url('../assets/images/hero-bio.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    min-height: 100vh;
+}
+
+
+.album-section__grid {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+
+}
