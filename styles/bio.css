@@ -1,14 +1,88 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #323232;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+.header__logo {
+  width: 7.5rem;
+  height: 1.25rem;
+}
+.header__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  color: #FFFFFF;
+}
+
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  width: 100%;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 43.75rem;
+  height: 31.25rem;
+}
+.hero__title {
+  font-size: 4.375rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
 }
 
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.25rem;
+}
+.bio-section__image {
+  width: 40.625rem;
+  height: 25rem;
+}
+.bio-section__heading {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.bio-section__heading__quotes {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.bio-section__heading__sub-heading {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-section {
+  display: flex;
+  flex-direction: column;
+}
 .album-section__grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
+}
+.album-section__image {
+  width: 400px;
+  height: 400px;
+}
+
+.footer {
+  background-color: #323232;
 }/*# sourceMappingURL=bio.css.map */
