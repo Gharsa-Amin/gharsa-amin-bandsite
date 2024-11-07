@@ -3,101 +3,86 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
-* {
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
-  }
+
 
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    background-color: #323232; 
+    @include flex-column; 
+    background-color: $primary-colorBlack; 
     min-width: 100vw;
-    padding-top: 24px; 
-    padding-bottom: 16px;     
-}
-
-.header__nav {
-    display: flex;
-    flex-direction: column;
+    padding-top: .875rem; 
+    padding-bottom: 1rem;     
+&__nav {
+    @include flex-column; 
     width: 100%;
-    height: 70px;
-    background-color: #323232;
-    justify-content: center;
-    align-items: center;
+    height: 4.375rem;
+    background-color: $primary-colorBlack;
+    
 }
-.header__logo {
+&__logo {
         margin-top: 1rem;
         padding: 0;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
+        @include flex-column; 
 }
     
-.header__logo-img {
+&__logo-img {
         width: 7.5rem;
         margin-bottom: .75rem;
     }
 
-    
-    .header__list {
-        list-style: none;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+&__list {
+        @include list-style; 
+        @include flex-row; 
         margin-top: 0.5rem;
-        
+        width: 100%;
+
 
         }
 
-        .header__item {
+&__item {
             width: 50vw;
             text-align: center;
             border-bottom: 0.2125rem solid transparent;
             color: #FFFFFF;
         }
 
-        .header__link {
-            text-decoration: none;
-            display: block;
+&__link {
+            @include list-style; 
+            @include flex-row;
             padding-bottom: 0.44rem;
+            padding-top: .75rem;
+            font-size: 1.25rem;
             color: #FFFFFF;
             &:hover {
                 border-bottom: 0.4125rem solid #FFFFFF; 
             }
             }
 
-    .header__link-passive {
-        text-decoration: none;
-        display: block;
+&__link-passive {
+        @include list-style; 
+        @include flex-row; 
+        font-size: 1.25rem;
         color: #E1E1E1;
     }
-        
-
+}
     .hero {
-        
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         background-image: url('../assets/images/hero-bio.jpg');
-        background-size: cover;
-        background-position: center;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+        @include flex-row; 
+        @include hero-position; 
         max-width: 100vw;
         height: 14rem;
         padding: 0;
 
+    &__opacity { 
+        background-color: rgba(0, 0, 0, 0.5);
+        max-width: 100vw;
+    }
+
     &__title {
+        @include font-layout {
         font-size: 2rem; 
         font-weight: 700;
-        line-height: 2rem;
-        color: #FFFFFF; 
+        line-height: 2rem}; 
+        color: $primary-colorWhite; 
         margin-bottom: 1.25rem;
     }
     }
@@ -110,70 +95,72 @@
         padding-right: 1.25rem;
     
     &__image {
-            width: 100%;
-            padding-bottom: 1rem;
+        width: 100%;
+        padding-bottom: 1rem;
         }
 
-
-    
-        &__heading {
-    display: flex;
-    justify-content: flex-start; 
-    font-size: 24px; 
-    display: flex;
-    flex-direction: column;
+    &__heading { 
+    @include flex-start; 
+    @include font-layout {
+    font-size: 1.875rem; 
+    line-height: 2rem; 
+    font-weight: 700;} 
     padding-top: 1.5rem;
     padding-bottom: 1rem;
+    color: $primary-colorBlack;
+        } 
 
     &__quotes {
-        font-size: 24px; 
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
+        @include font-layout {
+        font-size: 1.0938rem; 
+        line-height: 1.8125rem ; 
+        font-weight: 700; }; 
+        color: $primary-colorBlack;
+        padding-bottom: 1.125rem; 
     }
     &__sub-heading {
-        font-size: 18px;
-        display: flex;
-        flex-direction: column;
+        @include font-layout {
+        font-size: 1.125rem;
+        font-weight: 600;} 
+        padding-bottom: 1.125rem;
+        color: $primary-colorBlack;
+       
     
     }
+    &__paragraph {
+        @include font-layout {
+        font-size: 1.0625rem;
+        font-weight: 400;
+        line-height: 1.375rem; }
+        color: $primary-colorBlack;
+        padding-bottom: 1.5rem;   
     }
-    }
 
-
-
-
-
-
-/*
-&__logo {
-        width: 6rem;
-        height: auto; 
-    }
-&__list{
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start; 
-    margin-top: 1rem;
-    gap: 12px;
-    color: #FFFFFF;
+&__paragraph-sub {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem; 
 }
-*/ 
+    }
+
 
 .album-section {
-    display: flex;
-    flex-direction: column;
+    @include flex-start; 
     padding: 1.25rem;
-    background-color: #FAFAFA;
-    color: #000000;
+    background-color: $secondary-colorAlabaster;
+    color: $primary-colorBlack;
+
+&__heading {
+    @include font-layout {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.875rem}; 
+    padding-bottom: 1.5rem;
+
+}
 
 &__grid {
-    display: flex; 
-    justify-content: center;
-    flex-direction: column; 
-    align-items: flex-start;
-    gap: 20px; 
-
+    @include flex-start; 
+    gap: 1.25rem; 
 }
 
 &__image { 
@@ -183,53 +170,76 @@ height: auto;
 }
 
 .footer {
-    background-color: #323232; 
+    background-color: $primary-colorBlack; 
+    @include flex-start; 
+    color: $primary-colorWhite;
+
+&__heading {
+        padding-left: 1rem;
+        @include font-layout {
+        font-size: 1.5rem; 
+        font-weight: 700;
+        font-size: 1.875rem; }
+        color:$primary-colorWhite;
+        padding-top: 2.1875rem;
+    }
+&__paragraph {
     display: flex;
-    flex-direction: column;
-    color: #FFFFFF;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    gap: 1.5625rem;
 }
 
-.footer__paragraph {
+
+&__entity-name {
     display: flex;
     padding: 1rem;
     gap: 1.25rem;
-
+    @include  font-layout {
+    font-weight: 700;
+    font-size: 1.125rem};
 }
-.footer__heading {
-    padding-left: 1rem;
-    font-size: 1.5rem;
-}
-
-.footer__entity-name {
-    display: flex;
-    padding: 1rem;
-    gap: 1.25rem;
-}
-.footer__entity-address {
+&__entity-address {
     display: flex;
     padding: .75rem;
-    gap: 1.25rem;
+    gap: 1.25rem; 
+    @include font-layout {
+    font-weight: 400;
     font-style: normal;
+    font-size: 1.125rem}; 
 }
 
-.footer__email {
-    display: flex;
+&__email {
+    @include flex-start; 
+    @include list-style; 
     padding: .75rem;
-    gap: 1.25rem;
+    gap: 1.25rem; 
+    @include font-layout {
+    font-weight: 400;
     font-style: normal;
-    text-decoration: none;
-    color: #FAFAFA;
-}
-
-.footer__logo {
-    display: flex;
-    padding: 1rem;
-    gap: 1.25rem;
+    font-size: 1.125rem };
+    color: $primary-colorWhite;
     
 }
 
-.footer__text{
-    display: flex;
-    padding: 1rem;
+&__logo {
+    @include flex-start; 
+    padding-left: 1rem;
     gap: 1.25rem;
+    padding-top: 2.5rem;
+    width: 7.5rem;
+    
+}
+
+&__text{
+    @include flex-start; 
+    padding-left: 1rem;
+    padding-bottom: 1.5625rem;
+    padding-top: 1.5625rem;
+    gap: 1.25rem; 
+    @include  font-layout {
+    font-weight: 400;
+    font-size: .875rem; 
+}
+}
 }

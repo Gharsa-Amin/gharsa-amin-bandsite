@@ -19,8 +19,40 @@
     }
 }
 
-@mixin flex {
+@mixin flex-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@mixin list-style {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+@mixin hero-position {
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    position: relative;
+}
+
+@mixin font-layout {
+    @content ; 
 }
 
