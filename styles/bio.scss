@@ -4,7 +4,6 @@
 @use './partials/typography' as *;
 
 
-
 .header {
     @include flex-column; 
     background-color: $primary-colorBlack;
@@ -112,12 +111,12 @@
     }
     }
 
-
     .bio-section {
         display: flex;
         flex-direction: column;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
+        
 
         @include tablet {
             display: flex;
@@ -137,20 +136,21 @@
         }
     }
 
-    &__heading { 
-    @include flex-start; 
-    font-size: 1.875rem; 
-    line-height: 2rem; 
-    font-weight: 700; 
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    color: $primary-colorBlack;
-    @include tablet {
-        padding-bottom: 36px;
-        padding-top: 0;
-        font-size: 36px;
-        font-weight: 600;
-    }
+&__heading {  
+@include flex-start; 
+//     // font-family:"Nunito Sans"; 
+font-size: 1.875rem; 
+line-height: 2rem; 
+//     // padding-top: 1.5rem;
+//     // padding-bottom: 1rem;
+//     // color: $primary-colorBlack;
+//     // @include tablet {
+//     //     padding-bottom: 36px;
+//     //     padding-top: 0;
+//     //     font-size: 36px;
+//     //     font-weight: 600;
+        
+//     }
 }
 &__quotes {
         // font-size: 1.0938rem; 
@@ -166,6 +166,7 @@
         }
     }
 &__quotes-modifier {
+    font-size: 18px;
     @include tablet{
         font-size: 18px;
         font-weight: 500;
@@ -189,27 +190,51 @@
     }
     .p-wrapper {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+
+        @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;}
     }
-    &__paragraph {
-        // {
+    &__paragraphfirst {
+        
         // font-size: 1.0625rem;
         // font-weight: 400;
-        // line-height: 1.375rem; }
+        // line-height: 1.375rem; 
         color: $primary-colorBlack;
         padding-bottom: 1.5rem;   
         @include tablet {
             display: flex;
             flex-direction: row;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
 
         }
     }
-
-&__paragraph-sub {
-    padding-top: 1.5rem;
+    &__paragraphsecond {
+        
+        // font-size: 1.0625rem;
+        // font-weight: 400;
+        // line-height: 1.375rem; }
+        color: $primary-colorBlack;
+        padding-bottom: 1.5rem;   
+        padding-top: 1.5rem;
     padding-bottom: 1rem; 
-}
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+            padding-left: 30px;
+            padding-top: 0; 
+            padding-bottom: 0; 
 
+        }
+    }
+    }
 
 
 .album-section {
@@ -219,34 +244,45 @@
     color: $primary-colorBlack; 
     @include tablet {
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         justify-content: center;
+        
     }
 
 &__heading {
-    //  {
-    // font-size: 1.5rem;
-    // font-weight: 700;
-    // font-size: 1.875rem}; 
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.875rem; 
     padding-bottom: 1.5rem;
 
 }
 
-&__grid {
+&__gallery {
     @include flex-start; 
     gap: 1.25rem; 
     @include tablet {
         display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        width: 100%;
         flex-direction: row;
-        justify-content: center;
     }
 }
 
 &__image { 
 width: 100%;
-height: auto;
+// height: auto;
+@include tablet {
+    // flex: 1 1 30%;
+    // object-fit: cover;
+    max-width: 30%;
+    
 }
 }
+
+  /* Create three equal columns that sits next to each other */
+
 
 .footer {
     background-color: $primary-colorBlack; 
@@ -258,7 +294,7 @@ height: auto;
         // {
         // font-size: 1.5rem; 
         // font-weight: 700;
-        // font-size: 1.875rem; }
+        // font-size: 1.875rem; 
         color:$primary-colorWhite;
         padding-top: 2.1875rem;
     }
@@ -321,4 +357,6 @@ height: auto;
     // font-size: .875rem; 
 }
 }
-    }
+    
+}
+

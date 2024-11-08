@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Nunito Sans";
-  src: url("../assets/fonts/Alternative-files/NunitoSans-Bold.woff") format("woff"), url '../assets/fonts/NunitoSans-Bold.woff2) format("woff2"';
+  src: url("../assets/fonts/Alternative-files/NunitoSans-Bold.woff") format("woff"), url "../assets/fonts/NunitoSans-Bold.woff2" format("woff2");
   font-weight: 700;
 }
 @font-face {
@@ -219,18 +219,6 @@ body {
   justify-content: flex-start;
   font-size: 1.875rem;
   line-height: 2rem;
-  font-weight: 700;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  color: #323232;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__heading {
-    padding-bottom: 36px;
-    padding-top: 0;
-    font-size: 36px;
-    font-weight: 600;
-  }
 }
 .bio-section__quotes {
   color: #323232;
@@ -242,6 +230,9 @@ body {
     font-size: 24.5px;
     line-height: 30px;
   }
+}
+.bio-section__quotes-modifier {
+  font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   .bio-section__quotes-modifier {
@@ -263,86 +254,120 @@ body {
 }
 .bio-section .p-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.bio-section__paragraph {
+@media screen and (min-width: 768px) {
+  .bio-section .p-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.bio-section__paragraphfirst {
   color: #323232;
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .bio-section__paragraph {
+  .bio-section__paragraphfirst {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
   }
 }
-.bio-section__paragraph-sub {
+.bio-section__paragraphsecond {
+  color: #323232;
+  padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.bio-section .album-section {
+@media screen and (min-width: 768px) {
+  .bio-section__paragraphsecond {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    padding-left: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.album-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1.25rem;
   background-color: #FAFAFA;
   color: #323232;
+  /* Create three equal columns that sits next to each other */
 }
 @media screen and (min-width: 768px) {
-  .bio-section .album-section {
+  .album-section {
     display: flex;
-    flex-direction: row;
     justify-content: center;
   }
 }
-.bio-section .album-section__heading {
+.album-section__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.875rem;
   padding-bottom: 1.5rem;
 }
-.bio-section .album-section__grid {
+.album-section__gallery {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.25rem;
 }
 @media screen and (min-width: 768px) {
-  .bio-section .album-section__grid {
+  .album-section__gallery {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
     flex-direction: row;
-    justify-content: center;
   }
 }
-.bio-section .album-section__image {
+.album-section__image {
   width: 100%;
-  height: auto;
 }
-.bio-section .footer {
+@media screen and (min-width: 768px) {
+  .album-section__image {
+    max-width: 30%;
+  }
+}
+.album-section .footer {
   background-color: #323232;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color: #FFFFFF;
 }
-.bio-section .footer__heading {
+.album-section .footer__heading {
   padding-left: 1rem;
   color: #FFFFFF;
   padding-top: 2.1875rem;
 }
-.bio-section .footer__paragraph {
+.album-section .footer__paragraph {
   display: flex;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   gap: 1.5625rem;
 }
-.bio-section .footer__entity-name {
+.album-section .footer__entity-name {
   display: flex;
   padding: 1rem;
   gap: 1.25rem;
 }
-.bio-section .footer__entity-address {
+.album-section .footer__entity-address {
   display: flex;
   padding: 0.75rem;
   gap: 1.25rem;
 }
-.bio-section .footer__email {
+.album-section .footer__email {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -353,7 +378,7 @@ body {
   gap: 1.25rem;
   color: #FFFFFF;
 }
-.bio-section .footer__logo {
+.album-section .footer__logo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -362,7 +387,7 @@ body {
   padding-top: 2.5rem;
   width: 7.5rem;
 }
-.bio-section .footer__text {
+.album-section .footer__text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
