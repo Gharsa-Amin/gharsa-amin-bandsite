@@ -13,11 +13,11 @@
 }
 
 
-@mixin mobile {
-    @media screen and (min-width: $mobile-breakpoint) {
-    @content;
-    }
-}
+// @mixin mobile {
+//     @media screen and (min-width: $mobile-breakpoint) {
+//     @content;
+//     }
+// }
 
 @mixin flex-column {
     display: flex;
@@ -50,9 +50,5 @@
     background-position: center;
     align-items: center;
     position: relative;
-}
-
-@mixin font-layout {
-    @content ; 
 }
 
