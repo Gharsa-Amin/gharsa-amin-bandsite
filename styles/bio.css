@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Nunito Sans";
-  src: url("../assets/fonts/Alternative-files/NunitoSans-Bold.woff") format("woff"), url "../assets/fonts/NunitoSans-Bold.woff2" format("woff2");
+  src: url("../assets/fonts/NunitoSans-Bold.woff") format("woff"), url("../assets/fonts/Alternative-files/NunitoSans-Bold.woff2") format(woff2);
   font-weight: 700;
 }
 @font-face {
   font-family: "Nunito Sans";
-  src: url("../assets/fonts/Alternative-files/NunitoSans-ExtraBold.woff2") format("woff"), url("../assets/fonts/Alternative-files/NunitoSans-Medium.woff2") format(woff2);
+  src: url("../assets/fonts/NunitoSans-Medium.woff") format("woff"), url("../assets/fonts/Alternative-files/NunitoSans-Medium.woff2") format(woff2);
   font-weight: 500;
 }
 @font-face {
@@ -16,7 +16,6 @@
 h1 {
   font-family: "Nunito Sans";
   font-size: 24px;
-  font-weight: 700;
   line-height: 2rem;
 }
 
@@ -30,14 +29,13 @@ h2 {
 h3 {
   font-family: "Nunito Sans";
   font-size: 0.875rem;
-  font-weight: 600;
   line-height: 22px;
 }
 
 p {
   font-family: "Nunito Sans";
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125rem;
 }
 
@@ -50,6 +48,7 @@ a {
 
 h4 {
   font-family: "Nunito Sans";
+  font-weight: 500;
 }
 
 * {
@@ -62,6 +61,7 @@ body {
   font-family: "Nunito Sans";
 }
 
+/* Create three equal columns that sits next to each other */
 .header {
   display: flex;
   flex-direction: column;
@@ -70,6 +70,14 @@ body {
   background-color: #323232;
   padding-top: 0.875rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .header__nav {
   display: flex;
@@ -84,7 +92,7 @@ body {
     max-height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
   }
 }
@@ -98,12 +106,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__logo {
-    display: flex;
-    flex-direction: row;
+    padding-right: 6.25rem;
+    padding-left: 3.125rem;
   }
 }
 .header__logo-img {
-  width: 7.5rem;
+  width: 11.25rem;
   margin-bottom: 0.75rem;
 }
 @media screen and (min-width: 768px) {
@@ -125,31 +133,47 @@ body {
   text-align: center;
   border-bottom: 0.2125rem solid transparent;
   color: #FFFFFF;
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 1.5625rem;
 }
-.header__link {
+@media screen and (min-width: 768px) {
+  .header__item {
+    padding-bottom: 0;
+  }
+}
+.header__item-bio {
   list-style: none;
   padding: 0;
   text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   padding-bottom: 0.44rem;
   padding-top: 0.75rem;
   font-size: 1.25rem;
   color: #FFFFFF;
+  padding-right: 6.25rem;
 }
-.header__link:hover {
+.header__item-bio:hover {
   border-bottom: 0.4125rem solid #FFFFFF;
 }
-.header__link-passive {
+@media screen and (min-width: 768px) {
+  .header__item-bio {
+    font-size: 1.5625rem;
+  }
+}
+.header__item-shows {
   list-style: none;
   padding: 0;
   text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   font-size: 1.25rem;
   color: #E1E1E1;
+}
+.header__item-shows:hover {
+  border-bottom: 0.4125rem solid #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .header__item-shows {
+    font-size: 1.25rem;
+  }
 }
 
 .hero {
@@ -161,8 +185,10 @@ body {
   background-position: center;
   align-items: center;
   position: relative;
-  height: 14rem;
+  justify-content: flex-start;
   padding: 0;
+  padding-left: 1.875rem;
+  height: 14rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -175,15 +201,17 @@ body {
   }
 }
 .hero__opacity {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 .hero__title {
+  font-size: 2rem;
+  line-height: 2rem;
   color: #FFFFFF;
   margin-bottom: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 500;
   }
 }
@@ -197,10 +225,10 @@ body {
 @media screen and (min-width: 768px) {
   .bio-section {
     display: flex;
-    padding-top: 48px;
-    padding-bottom: 36px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 .bio-section__image {
@@ -219,25 +247,41 @@ body {
   justify-content: flex-start;
   font-size: 1.875rem;
   line-height: 2rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1rem;
+  color: #323232;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__heading {
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
 }
 .bio-section__quotes {
+  font-size: 1.0938rem;
+  line-height: 1.8125rem;
   color: #323232;
-  padding-bottom: 1.125rem;
+  padding-bottom: 0.4rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .bio-section__quotes {
-    padding-left: 35px;
-    font-size: 24.5px;
-    line-height: 30px;
+    padding-left: 2.1875rem;
+    font-size: 1.5313rem;
+    line-height: 1.875rem;
   }
 }
 .bio-section__quotes-modifier {
-  font-size: 18px;
+  font-size: 1.125rem;
+  padding-bottom: 1.5625rem;
 }
 @media screen and (min-width: 768px) {
   .bio-section__quotes-modifier {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 2rem;
   }
 }
 .bio-section__sub-heading {
@@ -250,6 +294,10 @@ body {
   .bio-section__sub-heading {
     display: flex;
     flex-direction: row;
+    padding-left: 2.1875rem;
+    padding-top: 1.5rem;
+    font-size: 1.5625rem;
+    padding-bottom: 1.625rem;
   }
 }
 .bio-section .p-wrapper {
@@ -261,22 +309,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-left: 2.1875rem;
   }
 }
 .bio-section__paragraphfirst {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
   color: #323232;
-  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .bio-section__paragraphfirst {
     display: flex;
     flex-direction: row;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 1.5625rem;
   }
 }
 .bio-section__paragraphsecond {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
   color: #323232;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
@@ -286,10 +340,10 @@ body {
   .bio-section__paragraphsecond {
     display: flex;
     flex-direction: row;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 25px;
-    padding-left: 30px;
+    line-height: 1.5625rem;
+    padding-left: 1.875rem;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -302,12 +356,13 @@ body {
   padding: 1.25rem;
   background-color: #FAFAFA;
   color: #323232;
-  /* Create three equal columns that sits next to each other */
 }
 @media screen and (min-width: 768px) {
   .album-section {
     display: flex;
     justify-content: center;
+    padding: 36px;
+    padding-top: 46px;
   }
 }
 .album-section__heading {
@@ -316,11 +371,20 @@ body {
   font-size: 1.875rem;
   padding-bottom: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .album-section__heading {
+    font-size: 2.25rem;
+  }
+}
 .album-section__gallery {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.25rem;
+  filter: grayscale(100%);
+}
+.album-section__gallery:hover { /*https://robinroelofsen.com/change-images-grayscale-color-hover */
+  filter: grayscale(0) !important;
 }
 @media screen and (min-width: 768px) {
   .album-section__gallery {
@@ -329,6 +393,7 @@ body {
     gap: 0.625rem;
     width: 100%;
     flex-direction: row;
+    gap: 1.75rem;
   }
 }
 .album-section__image {
@@ -338,61 +403,4 @@ body {
   .album-section__image {
     max-width: 30%;
   }
-}
-.album-section .footer {
-  background-color: #323232;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  color: #FFFFFF;
-}
-.album-section .footer__heading {
-  padding-left: 1rem;
-  color: #FFFFFF;
-  padding-top: 2.1875rem;
-}
-.album-section .footer__paragraph {
-  display: flex;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  gap: 1.5625rem;
-}
-.album-section .footer__entity-name {
-  display: flex;
-  padding: 1rem;
-  gap: 1.25rem;
-}
-.album-section .footer__entity-address {
-  display: flex;
-  padding: 0.75rem;
-  gap: 1.25rem;
-}
-.album-section .footer__email {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  padding: 0;
-  text-decoration: none;
-  padding: 0.75rem;
-  gap: 1.25rem;
-  color: #FFFFFF;
-}
-.album-section .footer__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 1rem;
-  gap: 1.25rem;
-  padding-top: 2.5rem;
-  width: 7.5rem;
-}
-.album-section .footer__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 1rem;
-  padding-bottom: 1.5625rem;
-  padding-top: 1.5625rem;
-  gap: 1.25rem;
 }/*# sourceMappingURL=bio.css.map */
