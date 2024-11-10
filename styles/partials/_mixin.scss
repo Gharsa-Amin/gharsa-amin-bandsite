@@ -12,13 +12,6 @@
     }
 }
 
-
-// @mixin mobile {
-//     @media screen and (min-width: $mobile-breakpoint) {
-//     @content;
-//     }
-// }
-
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -38,6 +31,13 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
+@mixin justify-align {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
 
 @mixin list-style {
     list-style: none;
