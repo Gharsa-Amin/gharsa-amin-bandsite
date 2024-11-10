@@ -3,99 +3,9 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
-
-
-.header {
-    @include flex-column; 
-    background-color: $primary-colorBlack;
-    padding-top: .875rem; 
-    padding-bottom: 1rem;    
-
-    @include tablet {
-        @include flex-start;  
-        flex-direction: row; 
-        @include justify-align; 
-    }
-
-&__nav {
-    @include flex-column; 
-    height: 4.375rem;
-    background-color: $primary-colorBlack;
-
-    @include tablet {
-        @include flex-row;
-        max-height: 100%;
-        padding: 0; 
-    } 
-    }
-    
-&__logo {
-        margin-top: 1rem;
-        padding: 0;
-        @include flex-column; 
-
-        @include tablet {
-            padding-right: 6.25rem;
-            padding-left: 3.125rem;
-
-        }
-}
-    
-&__logo-img {
-        width: 11.25rem;
-        margin-bottom: .75rem;
-        @include tablet {
-            width: 7.5rem;
-        }
-    }
-
-&__list {
-        @include list-style; 
-        @include flex-row; 
-        margin-top: 0.5rem;
-        width: 100%;
-
-        } 
-
-&__item {
-            text-align: center;
-            border-bottom: 0.2125rem solid transparent;
-            color: $primary-colorWhite;
-            display: inline-block; 
-            padding-top: 0.75rem; 
-            padding-bottom: 1.5625rem; 
-            @include tablet {
-                padding-bottom: 0; 
-            }
-        }
-
-&__item-first {
-            @include list-style; 
-            padding-bottom: 0.44rem;
-            padding-top: .75rem;
-            font-size: 1.25rem;
-            color: $primary-colorWhite;
-            padding-right: 6.25rem;
-            &:hover {
-                border-bottom: 0.4125rem solid $primary-colorWhite; 
-            }
-            @include tablet {
-                font-size: 1.5625rem; 
-            }
-
-            }
-
-&__item-second {
-        @include list-style; 
-        font-size: 1.25rem;
-        color: $secondary-colorMercury;
-        &:hover {
-            border-bottom: 0.4125rem solid $primary-colorWhite; 
-    
-        }
-    }
-
-}
+/* -----------------
+Hero-section 
+__________________________*/ 
 
 .hero {
     background-image: url('../assets/images/hero-bio.jpg'); 
@@ -105,6 +15,7 @@
     padding: 0;
     padding-left: 1.875rem;
     height: 14rem;
+    opacity: 50%;
     @include tablet {
         height: 27rem; 
     } 
@@ -113,7 +24,7 @@
     }
 
 &__opacity { 
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /*opacity adds a different layer of color on top of an image */ 
 }
 &__title {
     font-size: 2rem; 
@@ -128,7 +39,11 @@
 }
 }
 
-.bio-section {
+
+/*--------------------
+Bio-section
+------------------------*/ 
+.bio-section { 
     display: flex;
     flex-direction: column;
     padding-left: 1.25rem;
@@ -141,7 +56,7 @@
     }
 
 &__image {
-    width: 100%;
+    width: 100%; /* a 100% width for the mobile version gives the screen the full width, with padding added to otherscreens the layout can become smaller */
     padding-bottom: 1rem;
     @include tablet {
         padding-left: 3rem; 
@@ -181,7 +96,7 @@
     line-height: 1.8125rem ; 
     color: $primary-colorBlack;
     padding-bottom: 0.4rem; 
-    font-weight: 700;
+    font-weight: 600;
 
     @include tablet {
         padding-left: 2.1875rem;
@@ -191,13 +106,15 @@
     @include desktop {
         padding-left: 6rem;
         padding-right: 8rem;
-        font-size: 30px; 
+        font-size: 1.75rem; 
         line-height: 2rem;
+        padding-top: 1.875rem; 
     }
 }
 &__quotes-modifier {
 font-size: 1.125rem;
 padding-bottom: 1.5625rem;
+font-weight: 600;
 @include tablet{
     font-size: 1rem;
     padding-bottom: 2rem;
@@ -226,14 +143,13 @@ padding-bottom: 1.5625rem;
     }
     @include desktop {
         padding-left: 5rem;
-        padding-bottom: 48px; 
-        padding-top: 40px;
-        font-size: 30px;
+        padding-bottom: 3rem; 
+        padding-top: 2.5rem;
+        font-size: 1.875rem;
     }
 
-
 }
-.p-wrapper {
+.p-container {
     display: flex;
     flex-direction: column;
 
@@ -288,7 +204,9 @@ padding-bottom: 1.5625rem;
     }
 }
 }
-
+/*--------------------
+Album-section
+------------------------*/
 .album-section {
     @include flex-start; 
     padding: 1.25rem;
@@ -297,8 +215,8 @@ padding-bottom: 1.5625rem;
     @include tablet {
         display: flex;
         justify-content: center;
-        padding: 36px;
-        padding-top: 46px;
+        padding: 2.25rem;
+        padding-top: 2.875rem;
     }
 
 &__heading {
@@ -313,7 +231,7 @@ padding-bottom: 1.5625rem;
     }
     @include desktop {
         font-size: 3.4rem;
-        padding-top: 36px; 
+        padding-top: 2.25rem; 
     }
 
 }
@@ -321,7 +239,7 @@ padding-bottom: 1.5625rem;
 &__details {
     @include flex-start; 
     gap: 1.25rem; 
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
     filter: grayscale(100%);
     &:hover {
         -webkit-filter: grayscale(0) !important; /*https://robinroelofsen.com/change-images-grayscale-color-hover */
@@ -336,13 +254,13 @@ padding-bottom: 1.5625rem;
         gap: 1.75rem;
     }
     @include desktop {
-        padding-top: 36px;
-        padding-left: 16px;
+        padding-top: 2.25rem;
+        padding-left: 1rem;
     }
 }
 
 &__image { 
-width: 100%;
+width: 100%; /* if i set the width to be a 100%, and set the parent class to be in columns, it will occupy 100% of the availble space in mobile layout, in order to change that for other screens, I have to set the parent container to be flex direction row, and give it a width of 30%, so I can create an album where there are three pictures per row */ 
 @include tablet {
     max-width: 30%;
     
@@ -350,9 +268,11 @@ width: 100%;
 }
 }
 
-
+/*--------------------
+Footer-section
+------------------------*/
 footer {
-    display: flex;
+    display: flex; /* should set the big parent container to be column, and the direct parent of 3 child to be in one row while the elements of each child to be in a column fo in order to get the results */ 
     flex-direction: column;
 }
 .footer-section {
@@ -362,8 +282,8 @@ footer {
     flex-direction: column;
 
     @include desktop {
-        padding-left: 80px; 
-        padding-right: 80px; 
+        padding-left: 5rem; 
+        padding-right: 5rem; 
     }
 
 &__media {
@@ -377,26 +297,26 @@ footer {
 }
 
 &__heading {
-    font-size: 30px;
-    padding-left: 20px;
-    padding-top: 35px;
+    font-size: 1.875rem;
+    padding-left: 1.25rem;
+    padding-top: 2.1875rem;
     @include tablet {
-        font-size: 40px; 
+        font-size: 2.5rem; 
         padding-left: 1.5625rem; 
-        padding-top: 46px;
+        padding-top: 2.875rem;
         }
     @include desktop {
-        font-size: 45px;
+        font-size: 2.8125rem;
     }
         }
 
 
 &__images {
             display: flex;
-            gap: 50px;
-            padding-left: 20px;
-            padding-top: 30px; 
-            padding-bottom: 30px;
+            gap: 3.125rem;
+            padding-left: 1.25rem;
+            padding-top: 1.875rem; 
+            padding-bottom: 1.875rem;
         @include tablet {
             padding-left: 1.5625rem; 
             justify-content: space-around;
@@ -409,28 +329,28 @@ footer {
     
         
 &__logo {
-    padding-left: 20px;
+    padding-left: 1.25rem;
     @include tablet {
         padding-left: 1.5625rem; 
         justify-content: space-around;
         padding-top: 2.875rem;
         align-items: center;
         padding-bottom: 0; 
-        padding-right: 20px;
+        padding-right: 1.25rem;
         @include desktop {
-            padding-right: 20px;
+            padding-right: 1.25rem;
         }
     }
 }
 
 
-&__middle{
+&__middle{ /* in this section, if you visualize, all the elements are the same, easier to apply the same class names across the three sections to keey the code DRY */ 
     @include flex-start; 
     justify-content: space-evenly;
 @include tablet
 {@include flex-row; 
-    font-size: 18px;
-    padding-left: 18px; 
+    font-size: 1.125rem;
+    padding-left: 1.125rem; 
         justify-content: space-between;
         padding-top: 2.875rem;
         align-items: center;
@@ -447,40 +367,40 @@ footer {
 &__entity {
     padding: 1rem;
     gap: 1.25rem;
-    font-size: 18px;
-    padding-left: 20px;
-    padding-bottom: 18px;
+    font-size: 1.125rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1.125rem;
     font-weight: 500; 
     @include tablet {
     padding-top: 0; 
     @include desktop {
-        font-size: 22px; 
+        font-size: 1.3rem; 
         font-weight: bold; 
-        padding-bottom: 50px; 
-        padding-top: 40px;
+        padding-bottom: 2rem; 
+        padding-top: 2.5rem;
     }
 }
 }
 
 &__entityAddress {
     @include list-style; 
-    padding-left: 20px; 
+    padding-left: 1.25rem; 
     font-style: normal;
-    font-size: 14px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    font-size: .875rem;
+    padding-top: .625rem;
+    padding-bottom: 1.25rem;
 
     @include tablet {
     padding: .75rem;
 gap: 1.25rem;
 font-style: normal;
 font-weight: 400;
-font-size: 14px; 
-padding-bottom: 20px;
+font-size: .875rem; 
+padding-bottom: 1.25rem;
 
 @include desktop {
-    font-size: 18px;
-    padding-bottom: 40px;
+    font-size: 1.125rem;
+    padding-bottom: 2.5rem;
 }
 }
 }
@@ -488,38 +408,38 @@ padding-bottom: 20px;
 &__email {
     text-decoration: none;
     color: $primary-colorWhite;
-    padding-left: 20px; 
-    font-size: 14px; 
+    padding-left: 1.25rem; 
+    font-size: .875rem; 
     @include tablet {
     padding: .75rem;
     gap: 1.25rem; 
     font-weight: 400;
     font-style: normal;
-    font-size: 14px; 
-    padding-bottom: 20px; 
+    font-size: .875rem; 
+    padding-bottom: 1.25rem; 
 
     @include desktop {
-        font-size: 18px;
-        padding-bottom: 30px;
+        font-size: 1.125rem;
+        padding-bottom: 1.875rem;
     }
 
 }
 }
 
 &__text {
-padding-top: 30px; 
-padding-bottom: 30px;
-padding-left: 20px;
+padding-top: 1.875rem; 
+padding-bottom: 1.875rem;
+padding-left: 1.25rem;
     @include tablet {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    padding-left: 3.125rem;
 }
 @include desktop {
-    font-size: 18px;
-    padding-left: 15px;
-    padding-bottom: 120px;
-    padding-top: 60px;
+    font-size: 1.125rem;
+    padding-left: .9375rem;
+    padding-bottom: 7.5rem;
+    padding-top: 3.75rem;
 }
 
 }

@@ -1,4 +1,7 @@
 @use 'typography' as *;
+@use 'mixin' as *; 
+@use 'variables' as *; 
+
 
 * {
     box-sizing: border-box;
@@ -8,3 +11,94 @@
 body {
     font-family: "Nunito Sans";}
 
+    .header {
+        @include flex-column; 
+        background-color: $primary-colorBlack;
+        padding-top: .875rem; 
+        padding-bottom: 1rem;    
+    
+        @include tablet {
+            @include flex-start;  
+            flex-direction: row; 
+            @include justify-align; 
+        }
+    
+    &__nav {
+        @include flex-column; 
+        height: 4.375rem;
+        background-color: $primary-colorBlack;
+    
+        @include tablet {
+            @include flex-row;
+            max-height: 100%;
+            padding: 0; 
+        } 
+        }
+        
+    &__logo {
+            margin-top: 1rem;
+            padding: 0;
+            @include flex-column; 
+    
+            @include tablet {
+                padding-right: 6.25rem;
+                padding-left: 3.125rem;
+    
+            }
+    }
+        
+    &__logo-img {
+            width: 11.25rem;
+            margin-bottom: .75rem;
+            @include tablet {
+                width: 7.5rem;
+            }
+        }
+    
+    &__list {
+            @include list-style; 
+            @include flex-row; 
+            margin-top: 0.5rem;
+            width: 100%;
+    
+            } 
+    
+    &__item {
+                text-align: center;
+                border-bottom: 0.2125rem solid transparent;
+                color: $primary-colorWhite;
+                display: inline-block; 
+                padding-top: 0.75rem; 
+                padding-bottom: 1.5625rem; 
+                @include tablet {
+                    padding-bottom: 0; 
+                }
+            }
+    
+    &__item-first {
+                @include list-style; 
+                padding-bottom: 0.44rem;
+                padding-top: .75rem;
+                font-size: 1.25rem;
+                color: $primary-colorWhite;
+                padding-right: 6.25rem;
+                &:hover {
+                    border-bottom: 0.4125rem solid $primary-colorWhite; 
+                }
+                @include tablet {
+                    font-size: 1.5625rem; 
+                }
+    
+                }
+    
+    &__item-second {
+            @include list-style; 
+            font-size: 1.25rem;
+            color: $secondary-colorMercury;
+            &:hover {
+                border-bottom: 0.4125rem solid $primary-colorWhite; 
+        
+            }
+        }
+    
+    }
