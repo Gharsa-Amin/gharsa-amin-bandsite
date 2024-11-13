@@ -342,7 +342,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 20rem;
+  height: 22rem;
   display: flex;
   flex-direction: column;
   color: #FFFFFF;
@@ -360,6 +360,10 @@ footer {
   }
 }
 
+.opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 #hero-section__title {
   font-size: 20px;
   padding-top: 1.25rem;
@@ -368,4 +372,8 @@ footer {
 
 .hero-section__header {
   font-size: 40px;
+}
+
+iframe {
+  padding: 20px;
 }/*# sourceMappingURL=shows.css.map */
