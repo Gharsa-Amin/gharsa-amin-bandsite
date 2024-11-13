@@ -100,5 +100,185 @@ body {
         
             }
         }
-    
+
     }
+
+
+    /*--------------------
+Footer-section
+------------------------*/
+footer {
+    display: flex; /* should set the big parent container to be column, and the direct parent of 3 child to be in one row while the elements of each child to be in a column fo in order to get the results */ 
+    flex-direction: column;
+}
+.footer-section {
+    color: $primary-colorWhite;
+    background-color: $primary-colorBlack;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        padding-left: 5rem; 
+        padding-right: 5rem; 
+    }
+
+&__media {
+    @include flex-start; 
+    justify-content: flex-start; 
+    @include tablet {
+        @include flex-row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+&__heading {
+    font-size: 1.875rem;
+    padding-left: 1.25rem;
+    padding-top: 2.1875rem;
+    @include tablet {
+        font-size: 2.5rem; 
+        padding-left: 1.5625rem; 
+        padding-top: 2.875rem;
+        }
+    @include desktop {
+        font-size: 2.8125rem;
+    }
+        }
+
+
+&__images {
+            display: flex;
+            gap: 3.125rem;
+            padding-left: 1.25rem;
+            padding-top: 1.875rem; 
+            padding-bottom: 1.875rem;
+        @include tablet {
+            padding-left: 1.5625rem; 
+            justify-content: space-around;
+            padding-top: 2.875rem;
+            align-items: center;
+            padding-bottom: 0;
+            }
+
+        }
+    
+        
+&__logo {
+    padding-left: 1.25rem;
+    @include tablet {
+        padding-left: 1.5625rem; 
+        justify-content: space-around;
+        padding-top: 2.875rem;
+        align-items: center;
+        padding-bottom: 0; 
+        padding-right: 1.25rem;
+        @include desktop {
+            padding-right: 1.25rem;
+        }
+    }
+}
+
+
+&__middle{ /* in this section, if you visualize, all the elements are the same, easier to apply the same class names across the three sections to keey the code DRY */ 
+    @include flex-start; 
+    justify-content: space-evenly;
+@include tablet
+{@include flex-row; 
+    font-size: 1.125rem;
+    padding-left: 1.125rem; 
+        justify-content: space-between;
+        padding-top: 2.875rem;
+        align-items: center;
+        padding-bottom: 0; 
+        padding-right: .125rem; 
+        @include desktop {
+            padding-left: 0;
+            justify-content: space-between;
+            padding-right: 0;
+        }
+    }
+}
+
+&__entity {
+    padding: 1rem;
+    gap: 1.25rem;
+    font-size: 1.125rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1.125rem;
+    font-weight: 500; 
+    @include tablet {
+    padding-top: 0; 
+    @include desktop {
+        font-size: 1.3rem; 
+        font-weight: bold; 
+        padding-bottom: 2rem; 
+        padding-top: 2.5rem;
+    }
+}
+}
+
+&__entityAddress {
+    @include list-style; 
+    padding-left: 1.25rem; 
+    font-style: normal;
+    font-size: .875rem;
+    padding-top: .625rem;
+    padding-bottom: 1.25rem;
+
+    @include tablet {
+    padding: .75rem;
+gap: 1.25rem;
+font-style: normal;
+font-weight: 400;
+font-size: .875rem; 
+padding-bottom: 1.25rem;
+
+@include desktop {
+    font-size: 1.125rem;
+    padding-bottom: 2.5rem;
+}
+}
+}
+
+&__email {
+    text-decoration: none;
+    color: $primary-colorWhite;
+    padding-left: 1.25rem; 
+    font-size: .875rem; 
+    @include tablet {
+    padding: .75rem;
+    gap: 1.25rem; 
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem; 
+    padding-bottom: 1.25rem; 
+
+    @include desktop {
+        font-size: 1.125rem;
+        padding-bottom: 1.875rem;
+    }
+
+}
+}
+
+&__text {
+padding-top: 1.875rem; 
+padding-bottom: 1.875rem;
+padding-left: 1.25rem;
+    @include tablet {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    padding-left: 3.125rem;
+}
+@include desktop {
+    font-size: 1.125rem;
+    padding-left: .9375rem;
+    padding-bottom: 7.5rem;
+    padding-top: 3.75rem;
+}
+
+}
+
+
+}

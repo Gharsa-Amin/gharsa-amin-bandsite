@@ -1,0 +1,39 @@
+@use '../styles/partials/mixin' as *;
+@use '../styles/partials/global' as *; 
+@use '../styles/partials/typography' as *;
+@use '../styles/partials/variables' as *;
+
+
+
+
+
+.hero-section {
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    color: $primary-colorWhite; 
+    padding-left: 15px; 
+    opacity: 50%;
+@include tablet {
+    height: 27rem;
+}
+
+@include desktop {
+    height: 40rem;
+}
+
+}
+
+#hero-section__title {
+    font-size: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.hero-section__header {
+    font-size: 40px;
+}
