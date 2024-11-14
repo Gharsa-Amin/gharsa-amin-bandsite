@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styles/bio.css" />
-		<script src="./scripts/index-page.js" defer></script>
+	
 		<title>Document</title>
 	</head>
 	<body>
@@ -142,11 +142,11 @@
 			Join the Conversation
 		</h1>
 		<form id="itemForm"> 
-			<h4 class="item-name">NAME</h4>
+			<label class="item-name" for = "itemInput">NAME
+			<input type="text" name="itemInput" placeholder="Enter Your Name"/></label>
 			<img src="./assets/images/Mohan-muruge.jpg" class="item-image">
-			<input type="text" name="itemInput" placeholder="Enter Your Name"/>
 			<h4 class="item-name">Comment</h4>
-			<input type="text" name="itemComment" placeholder="Add a new comment">
+			<textarea type="text" name="itemComment" placeholder="Add a new comment"> (search this)
 			<button type="submit">Comment</button>
 		</form>
 
@@ -216,6 +216,8 @@
             </div>
         </footer>
     </main>
-</body>
 	</body> 
+
+	<script src="./scripts/index-page.js"></script>
+
 </html>
