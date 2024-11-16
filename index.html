@@ -143,10 +143,11 @@
 		</h1>
 		<form id="itemForm">  
 			<div class="border-bottom"> 
-			<div class="avatar-image">
-			<img src="./assets/images/Mohan-muruge.jpg" class="item-image"></div>
+			<!-- <div class="avatar-image"> -->
 			<label class="item-name" for="itemInput">NAME
 			<input type="text" id="itemInput"  name="itemInput" placeholder="Enter Your Name" required/></label>
+			<div class="image-wrapper">
+			<img src="./assets/images/Mohan-muruge.jpg" class="item-image"></div>
 			<label class="item-comment" for="itemComment">COMMENT
 			<textarea name="itemComment" id="itemComment" placeholder="Add a new comment" required></textarea></label>
 			<div class="button-container">
@@ -156,7 +157,8 @@
 		</form>
 		<ul id="dynamicContent">
 		</ul>
-	</section>
+	</section> 
+
 	<!--Footer-section--> 
 		<footer class="footer-section">
                 <div class="footer-section__media">

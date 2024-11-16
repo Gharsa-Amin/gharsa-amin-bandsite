@@ -18,16 +18,12 @@
 
 .border-bottom{
     border-bottom: 1px solid;
-    color: $secondary-colorMercury; 
-    width: 100%;
+    color: $secondary-colorMercury;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: .625rem
 }
-
-.comment-section__comment {
-
-border-bottom: 1px solid $secondary-colorMercury;
-
-}
-
 
 #dynamicContent {
     border-bottom: 1px solid $secondary-colorMercury;
@@ -35,21 +31,19 @@ border-bottom: 1px solid $secondary-colorMercury;
     padding-left: 30px;
     list-style: none;
 }
-.item-image {
-    display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    align-self: center;
 
+.image-wrapper {
+    width: 10%;
+    padding-left: 10px;
 }
+
 
 .item-name{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
-    padding-left: 50px;
+    // padding-left: 50px;
 }
 
 .item-comment{
@@ -57,18 +51,25 @@ border-bottom: 1px solid $secondary-colorMercury;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 50px;
+    // padding-left: 50px;
 }
+
+
 
 #itemInput {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; 
     height: 36px;
     border-radius: 4px ;
     border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    font-size: 1rem;
+    color: $primary-colorBlack;
+    padding-top: .125rem; 
+    padding-left: .625rem;
 }
 
 #itemComment {
@@ -76,10 +77,16 @@ border-bottom: 1px solid $secondary-colorMercury;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 96%;
-    height: 110px;
+    width: 100%;
+    height: 120px;
     border-radius: 4px;
     border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    color: $primary-colorBlack;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-left: 10px;
+
 }
 
 button {
@@ -87,6 +94,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
 }
 
 .button-container {
@@ -99,7 +107,52 @@ button {
     height: 48px;
     width: 48px;
     border-radius: 50%;
-    background-color: $secondary-colorMercury;
+    background-color: $secondary-colorMercury; 
+}
+
+
+.wrapper {
+    display: flex; 
+    align-items: flex-end;
+
+}
+
+
+.wrapper__name {
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
+    font-weight: 600;
+    padding-top: 1.25rem;
+    font-size: 1.25rem; 
+}
+
+.wrapper__dateTime {
+    padding-left: 4.375rem;
+    padding-top: 1.25rem;
+    color:$secondary-colorMercury; 
+    display: flex;
+    justify-self: flex-end; 
+}
+
+
+.comment-wrapper__comment {
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.comment-wrapper {
+    border-bottom: 1px solid $secondary-colorMercury;
+    width:  90%;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+.wrapper__avatar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
 }
 
 
@@ -115,7 +168,8 @@ button {
     cursor: pointer;
     border-radius: 5px;
     background-color: $primary-colorBlack;
-    color: $primary-colorWhite; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
+    color: $primary-colorWhite;
+    width: 100%; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
 @include tablet {
     min-width: 150px;
     padding-left: 2rem;
@@ -125,7 +179,7 @@ button {
 }
 
 .button-container  {
-   
+
     color: #FFF;
     border: none;
     padding: 1rem 3rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
@@ -138,7 +192,10 @@ button {
 }
 
 
-
+.form-section__header {
+    font-size: 1.875rem; 
+    padding: 1.25rem;
+}
 
 
 
