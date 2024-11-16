@@ -36,7 +36,7 @@ let cardInfo= [
 const mainShow = document.querySelector (".shows-section"); 
 const showHeader = document.createElement('h1'); 
 showHeader.classList.add ('show-section__header'); 
-showHeader.innerHTML = "Shows"; 
+showHeader.textContent = "Shows"; 
 mainShow.appendChild(showHeader); 
 
 
@@ -51,11 +51,11 @@ function createShowCard(showCardInfo) {
 
     const dateTitle = document.createElement('h3')
     dateTitle.classList.add ('show-section__date--title')
-    dateTitle.innerText = "Date"; 
+    dateTitle.textContent = "DATE"; 
     const dateContent = document.createElement('p'); 
 
     dateContent.classList.add ('show-section__date--content'); 
-    dateContent.innerHTML = showCardInfo.Date; 
+    dateContent.textContent = showCardInfo.Date; 
     cardDate.appendChild(dateTitle); 
     cardDate.appendChild(dateContent); 
 
@@ -65,11 +65,11 @@ function createShowCard(showCardInfo) {
 
     const venueTitle = document.createElement('h3')
     venueTitle.classList.add ('show-section__venue--title'); 
-    venueTitle.innerHTML = "Venue"; 
+    venueTitle.textContent = "VENUE"; 
 
     const venueContent = document.createElement('p'); 
     venueContent.classList.add ('show-section__venue--content'); 
-    venueContent.innerHTML = showCardInfo.Venue; 
+    venueContent.textContent = showCardInfo.Venue; 
     cardVenue.appendChild(venueTitle); 
     cardVenue.appendChild(venueContent); 
 
@@ -79,25 +79,32 @@ function createShowCard(showCardInfo) {
     
     const locationTitle = document.createElement('h3'); 
     locationTitle.classList.add ('show-section__location--title'); 
-    locationTitle.innerHTML = "Location"; 
+    locationTitle.textContent = "LOCATION"; 
 
     const locationContent = document.createElement('div'); 
     locationContent.classList.add ('show-section__location--content'); 
-    locationContent.innerHTML = showCardInfo.Location; 
+    locationContent.textContent = showCardInfo.Location; 
 
     cardLocation.appendChild(locationTitle); 
     cardLocation.appendChild(locationContent); 
 
+//Button 
+const cardButton = document.createElement('a'); 
+cardButton.classList.add('show-section__button'); 
+cardButton.textContent = "BUY TICKETS"; 
+cardButton.href = "#";
+
+
     cardEl.appendChild(cardDate); 
     cardEl.appendChild(cardVenue);
     cardEl.appendChild(cardLocation); 
+    cardEl.appendChild(cardButton); 
 
     mainShow.appendChild(cardEl); 
+    
 }
 
 cardInfo.forEach(showCardInfo => {
     createShowCard(showCardInfo);
 });
-
-
 

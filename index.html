@@ -137,19 +137,26 @@
 				</article>
 			</section>
 		</main>
-
+<section>
 		<h1 class="form-section__header">
 			Join the Conversation
 		</h1>
-		<form id="itemForm"> 
-			<label class="item-name" for = "itemInput">NAME
-			<input type="text" name="itemInput" placeholder="Enter Your Name"/></label>
-			<img src="./assets/images/Mohan-muruge.jpg" class="item-image">
-			<h4 class="item-name">Comment</h4>
-			<textarea type="text" name="itemComment" placeholder="Add a new comment"> (search this)
-			<button type="submit">Comment</button>
+		<form id="itemForm">  
+			<div class="border-bottom"> 
+			<div class="avatar-image">
+			<img src="./assets/images/Mohan-muruge.jpg" class="item-image"></div>
+			<label class="item-name" for="itemInput">NAME
+			<input type="text" id="itemInput"  name="itemInput" placeholder="Enter Your Name" required/></label>
+			<label class="item-comment" for="itemComment">COMMENT
+			<textarea name="itemComment" id="itemComment" placeholder="Add a new comment" required></textarea></label>
+			<div class="button-container">
+			<button type="submit">COMMENT</button>
+		</div>
+		</div>
 		</form>
-
+		<ul id="dynamicContent">
+		</ul>
+	</section>
 	<!--Footer-section--> 
 		<footer class="footer-section">
                 <div class="footer-section__media">
@@ -218,6 +225,6 @@
     </main>
 	</body> 
 
-	<script src="./scripts/index-page.js"></script>
+	<script src="scripts/index-page.js"></script>
 
 </html>

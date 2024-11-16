@@ -5,8 +5,6 @@
 
 
 
-
-
 .hero-section {
     background-image: url(../assets/images/hero-shows.jpg);
     background-position: center;
@@ -44,3 +42,115 @@
 iframe {
     padding: 20px
 }
+
+
+.show-section__header {
+    padding-top: 1.25rem;
+    padding-left: 1.875rem;
+    padding-bottom: 30px;
+    font-size: 46px;
+    display: flex; 
+
+}
+
+
+
+
+
+
+section.shows-section {
+    padding-bottom: 20px;
+}
+
+.ShowCardInfo {
+    padding-left: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #333;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+
+.show-section__date--title {
+    color: $secondary-colorMercury; 
+    padding-bottom: .625rem;
+    padding-top: 40px; 
+    @include tablet {
+        display: none;
+    }
+}
+
+.show-section__date--content {
+    color: $primary-colorBlack;  
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+.show-section__venue--title {
+    color: $secondary-colorMercury; 
+    padding-top: 1.875rem;
+    padding-bottom: .625rem; 
+
+    @include tablet {
+        display: none;
+    }
+
+}
+
+.show-section__venue--content {
+    font-size: 1.25rem;
+}
+.show-section__location--title {
+    color: $secondary-colorMercury;
+    padding-top: 1.875rem;
+    padding-bottom: 0.625rem;
+    @include tablet {
+        display: none; 
+}
+}
+
+.show-section__location--content {
+    font-size: 1.25rem;
+    // padding-bottom: 40px;
+}
+
+.show-section__button {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.25rem;
+    // position: relative; /* To keep it on top of the border, it is applied relative to the objects around it */
+    // z-index: 1;
+    // padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
+@include tablet {
+    min-width: 150px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 30px;
+}
+}
+
+a.show-section__button  {
+    background-color: $primary-colorBlack;
+    color: #FFF;
+    border: none;
+    // padding: 1rem 7rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
+    cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
+    font-size: 1.3125rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+

@@ -4,16 +4,138 @@
 @use './partials/typography' as *;
 
 
-
-
 .item-image {
     border-radius: 50%;
     width: 36px ;
 }
 
+#item-form {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+
+}
+
+.border-bottom{
+    border-bottom: 1px solid;
+    color: $secondary-colorMercury; 
+    width: 100%;
+}
+
+.comment-section__comment {
+
+border-bottom: 1px solid $secondary-colorMercury;
+
+}
 
 
+#dynamicContent {
+    border-bottom: 1px solid $secondary-colorMercury;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    list-style: none;
+}
+.item-image {
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    align-self: center;
 
+}
+
+.item-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.item-comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+#itemInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    border-radius: 4px ;
+    border-color: $secondary-colorMercury;
+}
+
+#itemComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 110px;
+    border-radius: 4px;
+    border-color: $secondary-colorMercury;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrapper__avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: $secondary-colorMercury;
+}
+
+
+button {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    // position: relative; /* To keep it on top of the border, it is applied relative to the objects around it */
+    // z-index: 1;
+    // padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $primary-colorBlack;
+    color: $primary-colorWhite; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
+@include tablet {
+    min-width: 150px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 30px;
+}
+}
+
+.button-container  {
+   
+    color: #FFF;
+    border: none;
+    padding: 1rem 3rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
+    cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
+    font-size: 1.3125rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
 
 
 
