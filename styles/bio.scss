@@ -3,68 +3,10 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
-
-.item-image {
-    border-radius: 50%;
-    width: 36px ;
-}
-
-#item-form {
-    display: flex;
-    width: 100%;
-    padding: 12px;
-}
-
-#itemInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    width: 90%; 
-    height: 36px;
-    border-radius: 4px ;
-    border-color: $secondary-colorMercury;
-    background-color: $secondary-colorAlabaster;
-    font-size: 1rem;
-    color: $primary-colorBlack;
-    padding-top: .125rem; 
-    padding-left: .625rem;
-}
-
-
-#itemComment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 120px;
-    border-radius: 4px;
-    border-color: $secondary-colorMercury;
-    background-color: $secondary-colorAlabaster;
-    color: $primary-colorBlack;
-    font-size: 1rem;
-    padding-top: 10px;
-    padding-left: 10px;
-
-}
-
-.form-section__conversations {
-    padding-top: 2.5rem;
-    padding-left: 1.25rem;
-}
-
-.border-bottom{
-    // border-bottom: 1px solid;
-    color: $secondary-colorMercury;
-    // width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: .625rem; 
-    padding-left: 40px;
-}
-
-.form-section__hero {
+/* ---------------------
+Form-section
+__________________________*/ 
+.form-hero {
 
     @include desktop {
     display: flex; 
@@ -73,10 +15,95 @@
 }
 }
 
+.form-section__conversations {
+    padding-top: 2.5rem;
+    padding-left: 1.25rem;
+}
+
+.item-name{
+    padding-bottom: .3125rem;
+    font-size: 1.3rem;
+}
+.item-comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 1.875rem;
+    font-size: 1.3rem;
+}
+
+.form-section__header {
+    font-size: 2.3rem; 
+    padding: 1.25rem;
+    padding-bottom: 3.125rem;
+
+    @include tablet {
+        padding-bottom: 5.625rem;
+    }
+
+    @include desktop {
+
+        
+        font-size: 3.125rem;
+        font-weight: 500;
+    }
+}
+
+
+#item-form {
+    display: flex;
+    width: 100%;
+    padding: .75rem;
+}
+
+#itemInput {
+    @include flex-start;  
+    align-items: flex-start; 
+    width: 90%; 
+    height: 2.25rem;
+    border-radius: .25rem ;
+    border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    font-size: 1rem;
+    color: $primary-colorBlack;
+    padding-top: .125rem; 
+    padding-left: .625rem;
+    font-family: "Nunito Sans"; 
+    color: $primary-colorBlack;
+}
+
+
+#itemComment {
+    @include flex-column; 
+    width: 90%;
+    height: 7.5rem;
+    border-radius: .25rem;
+    border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    color: $primary-colorBlack;
+    font-size: 1rem;
+    padding-top: .625rem;
+    padding-left: .625rem;
+    font-family: "Nunito Sans";
+    color: $primary-colorBlack;
+
+}
+
+.border-bottom{
+    color: $secondary-colorMercury;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: .625rem; 
+    padding-left: 2.5rem;
+}
+
+
 #dynamicContent {
-    border-bottom: 1px solid $secondary-colorMercury;
-    padding-bottom: 30px;
-    padding-left: 30px;
+    border-bottom: 1px solid $secondary-colorMercury; //using px units for borders
+    padding-bottom: 1.875rem;
+    padding-left: 1.875rem;
     list-style: none;
     width: 100%;
     border-top: 1px solid $secondary-colorMercury;
@@ -90,139 +117,52 @@
     }
 
     @include desktop {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
+        @include flex-column; 
         width: 50%;
     }
 }
 
 .image-wrapper {
     width: 10%;
-    padding-left: 10px;
-}
-
-
-.item-name{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    // padding-left: 50px;
-}
-
-.item-comment{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    // padding-left: 50px;
-}
-
-
-
-
-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-}
-
-
-.wrapper__avatar {
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    background-color: $secondary-colorMercury; 
-}
-
-.wrapper {
-    display: flex; 
-    align-items: flex-end;
-
-}
-
-
-.wrapper__name {
-    // padding-left: 1.25rem;
-    padding-top: 1.25rem;
-    font-weight: 600;
-    padding-top: 1.25rem;
-    font-size: 1rem; 
-    margin: .625rem; 
-    @include tablet {
-
-    }
-}
-
-.wrapper__dateTime {
-    // padding-left: 500px; 
-    padding-left: 4.375rem;
-    padding-top: 1.25rem;
-    color:$secondary-colorMercury; 
-    display: flex;
-    margin: .625rem;
-    align-items: flex-end;
-
-    @include tablet {
-        // margin: 1.875rem;
-        padding-left: 26rem
-    }
+    padding-left: 1.25rem;
+    margin-bottom: -10%;
     @include desktop {
-        justify-content: center;
+        margin-bottom: -12%;
+        padding-left: .75rem;
+        
     }
 }
 
-.comment-wrapper__comment {
-    padding: 20px;
-    padding-left: 30px;
+.item-image {
+    border-radius: 50%;
+    width: 2.25rem ;
+    height: 2.25rem;
+
+    @include tablet {
+        width: 2.875rem;
+        height: 2.875rem;
+    }
 }
-
-.comment-wrapper {
-    border-bottom: 1px solid $secondary-colorMercury;
-    width:  95%;
-        margin-left: auto;
-        margin-right: auto;
-
-}
-
-
-.wrapper__avatar {
-    display: flex;
-    flex-direction: column;
-    // padding-bottom: 30px; 
-    margin-top: 1.25rem;
-}
-
-
 button {
+    @include flex-column; 
     padding-left: 6.25rem;
     padding-right: 6.25rem;
     padding-top: 15px;
     padding-bottom: 15px; 
-    // position: relative; /* To keep it on top of the border, it is applied relative to the objects around it */
-    // z-index: 1;
-    // padding: 0.625rem 1.25rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     border-radius: 5px;
     background-color: $primary-colorBlack;
     color: $primary-colorWhite;
-    width: 100%; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
+    width: 100%; 
 @include tablet {
     min-width: 150px;
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 30%;
-    // padding-bottom: 30px;
+    width: 36%;
+}
+@include desktop {
+    min-width: 250px;
 }
 }
 
@@ -230,27 +170,88 @@ button {
 
     color: #FFF;
     border: none;
-    padding: 1rem 5rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
-    cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
+    padding: 3rem 3rem; 
+    cursor: pointer; 
     font-size: 1.3125rem;
     font-family: "Open Sans";
     font-weight: 400;
-    text-align: center;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        justify-content:flex-end; 
+        display: flex;
+        flex-direction: row;
+    }
+    
+
 }
 
-
-.form-section__header {
-    font-size: 1.875rem; 
-    padding: 1.25rem;
-
-    @include desktop {
-
-        padding-right: 300px; 
-        font-size: 50px;
-        font-weight: 500;
+.wrapper {
+    display: flex; 
+    align-items: flex-end;
+    &__avatar {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: $secondary-colorMercury; 
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.25rem;
+        }
+        &__name {
+            padding-top: 1.25rem;
+            font-weight: 500;
+            padding-top: 1.25rem;
+            font-size: 1.3rem; 
+            margin: .625rem; 
+            @include tablet {
+                font-size: 1.8rem;
+        
+            }
+    }
+    &__dateTime {
+        padding-left: 4.375rem;
+        padding-top: 1.25rem;
+        color:$secondary-colorMercury; 
+        display: flex;
+        margin: .625rem;
+        align-items: flex-end;
+        font-size: 1rem;
+    
+        @include tablet {
+            // margin: 1.875rem;
+            padding-left: 26rem; 
+            font-size: 1.8rem;
+        }
+        @include desktop {
+            justify-content: center;
+        }
     }
 }
+
+
+
+
+.comment-wrapper {
+    border-bottom: 1px solid $secondary-colorMercury;
+    width:  95%;
+        margin-left: auto;
+        margin-right: auto;
+        &__comment {
+            padding: 1.25rem;
+            padding-left: 1.875rem;
+            font-size: 1.3rem;
+            @include tablet {
+                font-size: 1.5rem;
+            }
+        }
+
+}
+
+
+
+
 
 
 
@@ -263,7 +264,7 @@ __________________________*/
 .hero {
     background: 
     linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
-    ), url('../assets/images/hero-bio.jpg');
+    ), url('../assets/images/hero-shows.jpg');
     @include flex-row; 
     @include hero-position; 
     justify-content: flex-start;
@@ -521,6 +522,7 @@ width: 100%; /* if i set the width to be a 100%, and set the parent class to be 
 }
 }
 }
+
 
 
 

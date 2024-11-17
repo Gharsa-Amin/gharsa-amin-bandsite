@@ -337,15 +337,57 @@ footer {
   }
 }
 
-.item-image {
-  border-radius: 50%;
-  width: 36px;
+/* ---------------------
+Form-section
+__________________________*/
+@media screen and (min-width: 1280px) {
+  .form-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-section__conversations {
+  padding-top: 2.5rem;
+  padding-left: 1.25rem;
+}
+
+.item-name {
+  padding-bottom: 0.3125rem;
+  font-size: 1.3rem;
+}
+
+.item-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1.875rem;
+  font-size: 1.3rem;
+}
+
+.form-section__header {
+  font-size: 2.3rem;
+  padding: 1.25rem;
+  padding-bottom: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .form-section__header {
+    padding-bottom: 5.625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form-section__header {
+    font-size: 3.125rem;
+    font-weight: 500;
+  }
 }
 
 #item-form {
   display: flex;
   width: 100%;
-  padding: 12px;
+  padding: 0.75rem;
 }
 
 #itemInput {
@@ -354,14 +396,16 @@ footer {
   justify-content: flex-start;
   align-items: flex-start;
   width: 90%;
-  height: 36px;
-  border-radius: 4px;
+  height: 2.25rem;
+  border-radius: 0.25rem;
   border-color: #E1E1E1;
   background-color: #FAFAFA;
   font-size: 1rem;
   color: #323232;
   padding-top: 0.125rem;
   padding-left: 0.625rem;
+  font-family: "Nunito Sans";
+  color: #323232;
 }
 
 #itemComment {
@@ -370,41 +414,31 @@ footer {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 120px;
-  border-radius: 4px;
+  height: 7.5rem;
+  border-radius: 0.25rem;
   border-color: #E1E1E1;
   background-color: #FAFAFA;
   color: #323232;
   font-size: 1rem;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.form-section__conversations {
-  padding-top: 2.5rem;
-  padding-left: 1.25rem;
+  padding-top: 0.625rem;
+  padding-left: 0.625rem;
+  font-family: "Nunito Sans";
+  color: #323232;
 }
 
 .border-bottom {
   color: #E1E1E1;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.625rem;
-  padding-left: 40px;
-}
-
-@media screen and (min-width: 1280px) {
-  .form-section__hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  padding-left: 2.5rem;
 }
 
 #dynamicContent {
   border-bottom: 1px solid #E1E1E1;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding-bottom: 1.875rem;
+  padding-left: 1.875rem;
   list-style: none;
   width: 100%;
   border-top: 1px solid #E1E1E1;
@@ -422,28 +456,33 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     width: 50%;
   }
 }
 
 .image-wrapper {
   width: 10%;
-  padding-left: 10px;
+  padding-left: 1.25rem;
+  margin-bottom: -10%;
+}
+@media screen and (min-width: 1280px) {
+  .image-wrapper {
+    margin-bottom: -12%;
+    padding-left: 0.75rem;
+  }
 }
 
-.item-name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.item-image {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
 }
-
-.item-comment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+@media screen and (min-width: 768px) {
+  .item-image {
+    width: 2.875rem;
+    height: 2.875rem;
+  }
 }
 
 button {
@@ -451,32 +490,75 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  button {
+    min-width: 150px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 36%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  button {
+    min-width: 250px;
+  }
 }
 
 .button-container {
+  color: #FFF;
+  border: none;
+  padding: 3rem 3rem;
+  cursor: pointer;
+  font-size: 1.3125rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  text-decoration: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-
-.wrapper__avatar {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  background-color: #E1E1E1;
+@media screen and (min-width: 768px) {
+  .button-container {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .wrapper {
   display: flex;
   align-items: flex-end;
 }
-
+.wrapper__avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+}
 .wrapper__name {
   padding-top: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-top: 1.25rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .wrapper__name {
+    font-size: 1.8rem;
+  }
 }
 .wrapper__dateTime {
   padding-left: 4.375rem;
@@ -485,10 +567,12 @@ button {
   display: flex;
   margin: 0.625rem;
   align-items: flex-end;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .wrapper__dateTime {
     padding-left: 26rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -497,66 +581,20 @@ button {
   }
 }
 
-.comment-wrapper__comment {
-  padding: 20px;
-  padding-left: 30px;
-}
-
 .comment-wrapper {
   border-bottom: 1px solid #E1E1E1;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
-
-.wrapper__avatar {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.25rem;
-}
-
-button {
-  padding-left: 6.25rem;
-  padding-right: 6.25rem;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #323232;
-  color: #FFFFFF;
-  width: 100%; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */
+.comment-wrapper__comment {
+  padding: 1.25rem;
+  padding-left: 1.875rem;
+  font-size: 1.3rem;
 }
 @media screen and (min-width: 768px) {
-  button {
-    min-width: 150px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 30%;
-  }
-}
-
-.button-container {
-  color: #FFF;
-  border: none;
-  padding: 1rem 5rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
-  cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
-  font-size: 1.3125rem;
-  font-family: "Open Sans";
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-}
-
-.form-section__header {
-  font-size: 1.875rem;
-  padding: 1.25rem;
-}
-@media screen and (min-width: 1280px) {
-  .form-section__header {
-    padding-right: 300px;
-    font-size: 50px;
-    font-weight: 500;
+  .comment-wrapper__comment {
+    font-size: 1.5rem;
   }
 }
 
@@ -564,7 +602,7 @@ button {
 Hero-section 
 __________________________*/
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-shows.jpg");
   display: flex;
   flex-direction: row;
   justify-content: center;
