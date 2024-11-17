@@ -1,249 +1,205 @@
-@use '../styles/partials/mixin' as *;
-@use '../styles/partials/global' as *; 
-@use '../styles/partials/typography' as *;
-@use '../styles/partials/variables' as *;
-
+@use "../styles/partials/mixin" as *;
+@use "../styles/partials/global" as *;
+@use "../styles/partials/typography" as *;
+@use "../styles/partials/variables" as *;
 
 .hero-section {
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
-    ), url('../assets/images/hero-shows.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    color: $primary-colorWhite; 
-    padding-left: 15px; 
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("../assets/images/hero-shows.jpg");
+@include shows-hero;
+height: 25rem;
+color: $primary-colorWhite;
+padding-left: .9375rem;
 @include tablet {
-    height: 29rem;
+height: 29rem;
 }
-
 @include desktop {
-    height: 40rem;
-}
-}
-
-.show-section__top-row{
-    display: none;
-
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding-right: 450px;
-        color: $secondary-colorMercury;
-        padding-top: 2.5rem; 
-        font-size: 1.875rem;
-    }
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content:space-evenly; 
-        padding-right: 15.625rem;
-        color: $secondary-colorMercury;
-    }
+height: 40rem;
+} 
+&__container {
+	@include desktop {
+		padding: 1.875rem;
+		@include flex-end; 
+	}
 }
 
+&__header {
+	font-size: 2.25rem;
+	@include tablet {
+		font-size: 3.125rem;
+	}
+	@include desktop {
+		font-size: 4rem;
+		padding-left: 6.25rem;
+	}
+}
 
-
-
+}
 #hero-section__title {
-    font-size: 20px;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    @include tablet {
-        font-size: 1.875rem
-    }
-    @include desktop {
-        padding-left: 6.25rem;
-        padding-top: 5rem;
-    }
-}
-
-.hero-section__header {
-    font-size: 36px;
-    @include tablet {
-        font-size: 3.125rem;
-    }
-    @include desktop {
-        font-size: 4rem;
-        padding-left: 100px;
-    }
+	font-size: 1.25rem;
+	padding-top: 2.5rem;
+	padding-bottom: 1.25rem;
+	@include tablet {
+		font-size: 1.875rem;
+	}
+	@include desktop {
+		padding-left: 6.25rem;
+		padding-top: 5rem;
+	}
+    
 }
 
 
-.hero-section__wrapper {
-    @include desktop {
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        
-    }
-}
+.show-section__top-row {
+display: none;
 
+@include tablet {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly; 
+color: $secondary-colorMercury;
+padding-top: 2.5rem;
+padding-right: 15rem;
+font-size: 1.25rem;
+}
+@include desktop {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding-right: 15.625rem;
+color: $secondary-colorMercury;
+	}
+}
 
 iframe {
-    padding: 20px; 
-    width: 100%; 
-    @include tablet {
-        width: 50%;
-    }
-    @include desktop {
-        width: 60%;
-    }
-}
-
-.hero-section__iframe {
-    width: 100%;
-    height: 166px;
-    font-size: .625rem;
-    color: #cccccc; 
-    font-weight: 100;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    text-overflow: ellipsis;
-    word-break: normal;
-    overflow: hidden;
-    white-space: nowrap;    
-
-    @include desktop {
-        height: 280px;
-        padding-right: 6.25rem; 
+	padding: 1.25rem;
+	width: 100%;
+    @include iframe; 
+	@include tablet {
+		width: 50%;
+	}
+	@include desktop {
+		width: 60%;
+        height: 17.5rem;
+        padding-right: 6.25rem;
         width: 100%;
         width: 100%;
-    }
-
+	}
 }
 
 .show-section__header {
-    padding-top: 3.125rem;
-    padding-left: 1.875rem;
-    font-size: 46px;
-    display: flex; 
-
+	padding-top: 3.125rem;
+	padding-left: 1.875rem;
+	font-size: 2.875rem;
+	display: flex;
 }
 
 section.shows-section {
-    padding-bottom: 20px;
+	padding-bottom: 1.25rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
 }
 
 .ShowCardInfo {
-    padding-left: 1.875rem;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid $secondary-colorMercury;
-    padding-bottom: 1.875rem;
-    padding-top: 1.25rem;
+	padding-left: 1.875rem;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid $secondary-colorMercury;
+	padding-bottom: 1.875rem;
+	padding-top: 1.25rem;
 
-
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-width: 90%;
-        padding-left: 1.875rem;
-        padding-right: 1.875rem;
-    }
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly; 
-        align-items: center;
-        padding-left: 12.5rem;
-    }
+	@include tablet {
+	@include flex-center; 
+		border-width: 90%;
+		padding-left: 1.875rem;
+		padding-right: 1.875rem;
+	}
+	@include desktop {
+		@include flex-center; 
+		padding-left: 12.5rem;
+	}
 }
 
 .show-section__date--title {
-    color: $secondary-colorMercury; 
-    padding-bottom: .625rem;
-    padding-top: 1.5rem; 
-    @include tablet {
-        display: none;
-    }
+	color: $secondary-colorMercury;
+	padding-bottom: 0.625rem;
+	padding-top: 1.5rem;
+	@include tablet {
+		display: none;
+	}
 }
 
 .show-section__date--content {
-    color: $primary-colorBlack;  
-    font-weight: bold; 
-    font-size: 20px;
+	color: $primary-colorBlack;
+	font-weight: bold;
+	font-size: 1.25rem;
 }
 
 .show-section__venue--title {
-    color: $secondary-colorMercury; 
-    padding-top: 1.875rem;
-    padding-bottom: .625rem; 
+	color: $secondary-colorMercury;
+	padding-top: 1.875rem;
+	padding-bottom: 0.625rem;
 
-    @include tablet {
-        display: none;
-    }
-
+	@include tablet {
+		display: none;
+	}
 }
 
 .show-section__venue--content {
-    font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 .show-section__location--title {
-    color: $secondary-colorMercury;
-    padding-top: 1.875rem;
-    padding-bottom: 0.625rem;
-    @include tablet {
-        display: none; 
-}
+	color: $secondary-colorMercury;
+	padding-top: 1.875rem;
+	padding-bottom: 0.625rem;
+	@include tablet {
+		display: none;
+	}
 }
 
 .show-section__location--content {
-    font-size: 1.25rem;
-    padding-bottom: 12px;
+	font-size: 1.25rem;
+	padding-bottom: .75rem;
 }
 
 .show-section__button {
-    padding-top: 1.875rem;
-    padding-bottom: 1.25rem;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 90%;
-    border-radius: 5px; 
-@include tablet {
-    min-width: 150px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 30px;
-    padding-top: .9375rem;
-    padding-bottom: .9375rem;
-    width: 30%;
-}
-}
-
-a.show-section__button  {
-    background-color: $primary-colorBlack;
-    color: #FFF;
-    border: none;
-    cursor: pointer;
-    font-size: 1.3125rem;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+	font-size: 1rem;
+	cursor: pointer;
+	width: 90%;
+	border-radius: .3125rem;
+	@include tablet {
+		min-width: 9.375rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-bottom: 1.875rem;
+		padding-top: 0.9375rem;
+		padding-bottom: 0.9375rem;
+		width: 30%;
+	}
 }
 
-
+a.show-section__button {
+	background-color: $primary-colorBlack;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 1.3125rem;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+}
 
 .ShowCardInfo {
-    transition: all 0.3s ease;
-    
-    &:hover {
-    background-color: $secondary-colorAlabaster; 
-    cursor: pointer; 
-    }
+	transition: all 0.3s ease;
 
-    
-    &.selected {
-    background-color: $secondary-colorMercury; 
-    }
+	&:hover {
+		background-color: $secondary-colorAlabaster;
+		cursor: pointer;
+	}
+
+	&.selected {
+		background-color: $secondary-colorMercury;
+	}
 }
-
-
-

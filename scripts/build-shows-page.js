@@ -33,12 +33,13 @@ let cardInfo= [
 
 ]; 
 
-const mainShow = document.querySelector (".shows-section"); 
-const showHeader = document.createElement('h1'); 
-showHeader.classList.add ('show-section__header'); 
-showHeader.textContent = "Shows"; 
+const mainShow = document.querySelector (".shows-section"); // 1st: calling the class in html 
+const showHeader = document.createElement('h1');  // 2nd step: creating the class type 
+showHeader.classList.add ('show-section__header'); // 3rd: Naming the actual class and adding it within your step 2 (like <section class ="Learning-Javascript")
+showHeader.textContent = "Shows";  //step four: embedding the content of the class within the class by using textContent. 
 mainShow.appendChild(showHeader); 
-const topRow = document.createElement('article');
+
+const topRow = document.createElement('article'); // this class will only be used in desktop and tablet layouts. 
 topRow.classList.add('show-section__top-row');
 const dateTop = document.createElement('p');
 dateTop.textContent = "DATE"; 
@@ -47,18 +48,18 @@ VenueTop.textContent = "VENUE";
 const locationTop = document.createElement('p'); 
 locationTop.textContent = "LOCATION";
 
-mainShow.appendChild(topRow);
+mainShow.appendChild(topRow);    //step 5: appending the children to its direct parent. 
 topRow.appendChild(dateTop); 
 topRow.appendChild(VenueTop); 
 topRow.appendChild(locationTop); 
 
 
-function createShowCard(showCardInfo) {
+function createShowCard(showCardInfo) {  //creating a function and creating elements within the function, and using the Foreach to retrieve all the values from the indexes within the object.
     const cardEl = document.createElement('article');
     cardEl.classList.add('ShowCardInfo'); 
 
     //Date 
-    const cardDate = document.createElement('div');
+    const cardDate = document.createElement('div'); // created a section for date, venue and location and to be repeated across all three sections. 
     cardDate.classList.add('show-section__date'); 
 
     const dateTitle = document.createElement('h3')
@@ -125,6 +126,6 @@ cardButton.href = "#";
 }
 
 
-cardInfo.forEach(showCardInfo => {
+cardInfo.forEach(showCardInfo => { 
     createShowCard(showCardInfo);
 });
