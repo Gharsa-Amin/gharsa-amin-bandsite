@@ -40,7 +40,6 @@ showHeader.textContent = "Shows";
 mainShow.appendChild(showHeader); 
 
 
-
 function createShowCard(showCardInfo) {
     const cardEl = document.createElement('article');
     cardEl.classList.add('ShowCardInfo'); 
@@ -100,9 +99,18 @@ cardButton.href = "#";
     cardEl.appendChild(cardLocation); 
     cardEl.appendChild(cardButton); 
 
+
     mainShow.appendChild(cardEl); 
-    
+    cardEl.addEventListener('click', function() {
+        const selectedCard = document.querySelector('.ShowCardInfo.selected');
+        if (selectedCard) {
+            selectedCard.classList.remove('selected');
+        }
+        cardEl.classList.add('selected');
+    });
+
 }
+
 
 cardInfo.forEach(showCardInfo => {
     createShowCard(showCardInfo);

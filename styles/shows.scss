@@ -4,9 +4,10 @@
 @use '../styles/partials/variables' as *;
 
 
-
 .hero-section {
-    background-image: url(../assets/images/hero-shows.jpg);
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
+    ), url('../assets/images/hero-shows.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,48 +16,90 @@
     flex-direction: column;
     color: $primary-colorWhite; 
     padding-left: 15px; 
-    opacity: 50%;
 @include tablet {
-    height: 27rem;
+    height: 29rem;
 }
 
 @include desktop {
     height: 40rem;
 }
-
 }
 
-.opacity {
-    background-color: rgb(0, 0, 0, 0.5);
-}
 #hero-section__title {
     font-size: 20px;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    @include tablet {
+        font-size: 1.875rem
+    }
 }
 
 .hero-section__header {
-    font-size: 40px;
+    font-size: 36px;
+    @include tablet {
+        font-size: 3.125rem;
+    }
+    @include desktop {
+        font-size: 4rem;
+    }
 }
 
-iframe {
-    padding: 20px
+
+.hero-section__wrapper {
+    @include desktop {
+        justify-content: flex-start;
+    }
 }
+iframe {
+    padding: 20px; 
+    width: 100%; 
+    @include tablet {
+        width: 50%;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+    }
+}
+
+.hero-section__iframe {
+    width: 100%;
+    height: 166px;
+    font-size: .625rem;
+    color: #cccccc; 
+    font-weight: 100;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    text-overflow: ellipsis;
+    // line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;    
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; 
+        height: auto;
+        padding-right: 6.25rem; 
+        
+    }
+
+}
+
+
+
 
 
 .show-section__header {
-    padding-top: 1.25rem;
+    padding-top: 3.125rem;
     padding-left: 1.875rem;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
     font-size: 46px;
     display: flex; 
 
 }
-
-
-
-
-
 
 section.shows-section {
     padding-bottom: 20px;
@@ -66,22 +109,33 @@ section.shows-section {
     padding-left: 1.875rem;
     display: flex;
     flex-direction: column;
-    border-bottom: 3px solid #333;
+    border-bottom: 1px solid $secondary-colorMercury;
+    padding-bottom: 1.875rem;
+    padding-top: 1.25rem;
+
 
     @include tablet {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        border-width: 90%;
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
     }
-
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; 
+        align-items: center;
+        padding-left: 12.5rem;
+    }
 }
-
 
 .show-section__date--title {
     color: $secondary-colorMercury; 
     padding-bottom: .625rem;
-    padding-top: 40px; 
+    padding-top: 1.5rem; 
     @include tablet {
         display: none;
     }
@@ -118,12 +172,12 @@ section.shows-section {
 
 .show-section__location--content {
     font-size: 1.25rem;
+    // padding-bottom: 1.5625rem;
     // padding-bottom: 40px;
+    padding-bottom: 12px;
 }
 
 .show-section__button {
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
     padding-top: 1.875rem;
     padding-bottom: 1.25rem;
     // position: relative; /* To keep it on top of the border, it is applied relative to the objects around it */
@@ -131,12 +185,18 @@ section.shows-section {
     // padding: 0.625rem 1.25rem;
     font-size: 1rem;
     cursor: pointer;
+    width: 90%;
     border-radius: 5px; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
 @include tablet {
     min-width: 150px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 30px;
+    // padding-left: 6.25rem;
+    // padding-right: 6.25rem;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+    width: 30%;
 }
 }
 
@@ -147,10 +207,26 @@ a.show-section__button  {
     // padding: 1rem 7rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
     cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
     font-size: 1.3125rem;
-    font-family: "Open Sans";
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
     text-decoration: none;
 }
+
+
+
+.ShowCardInfo {
+    transition: all 0.3s ease;
+    
+    &:hover {
+    background-color: $secondary-colorAlabaster; 
+    cursor: pointer; 
+    }
+
+    
+    &.selected {
+    background-color: $secondary-colorMercury; 
+    }
+}
+
 
 

@@ -13,16 +13,64 @@
     display: flex;
     width: 100%;
     padding: 12px;
+}
+
+#itemInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    width: 90%; 
+    height: 36px;
+    border-radius: 4px ;
+    border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    font-size: 1rem;
+    color: $primary-colorBlack;
+    padding-top: .125rem; 
+    padding-left: .625rem;
+}
+
+
+#itemComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 120px;
+    border-radius: 4px;
+    border-color: $secondary-colorMercury;
+    background-color: $secondary-colorAlabaster;
+    color: $primary-colorBlack;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-left: 10px;
 
 }
 
+.form-section__conversations {
+    padding-top: 2.5rem;
+    padding-left: 1.25rem;
+}
+
 .border-bottom{
-    border-bottom: 1px solid;
+    // border-bottom: 1px solid;
     color: $secondary-colorMercury;
-    width: 70%;
+    // width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: .625rem
+    padding-bottom: .625rem; 
+    padding-left: 40px;
+}
+
+.form-section__hero {
+
+    @include desktop {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 #dynamicContent {
@@ -30,6 +78,24 @@
     padding-bottom: 30px;
     padding-left: 30px;
     list-style: none;
+    width: 100%;
+    border-top: 1px solid $secondary-colorMercury;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 50%;
+    }
 }
 
 .image-wrapper {
@@ -56,38 +122,6 @@
 
 
 
-#itemInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    height: 36px;
-    border-radius: 4px ;
-    border-color: $secondary-colorMercury;
-    background-color: $secondary-colorAlabaster;
-    font-size: 1rem;
-    color: $primary-colorBlack;
-    padding-top: .125rem; 
-    padding-left: .625rem;
-}
-
-#itemComment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 4px;
-    border-color: $secondary-colorMercury;
-    background-color: $secondary-colorAlabaster;
-    color: $primary-colorBlack;
-    font-size: 1rem;
-    padding-top: 10px;
-    padding-left: 10px;
-
-}
 
 button {
     display: flex;
@@ -110,7 +144,6 @@ button {
     background-color: $secondary-colorMercury; 
 }
 
-
 .wrapper {
     display: flex; 
     align-items: flex-end;
@@ -119,21 +152,34 @@ button {
 
 
 .wrapper__name {
-    padding-left: 1.25rem;
+    // padding-left: 1.25rem;
     padding-top: 1.25rem;
     font-weight: 600;
     padding-top: 1.25rem;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
+    margin: .625rem; 
+    @include tablet {
+
+    }
 }
 
 .wrapper__dateTime {
+    // padding-left: 500px; 
     padding-left: 4.375rem;
     padding-top: 1.25rem;
     color:$secondary-colorMercury; 
     display: flex;
-    justify-self: flex-end; 
-}
+    margin: .625rem;
+    align-items: flex-end;
 
+    @include tablet {
+        // margin: 1.875rem;
+        padding-left: 26rem
+    }
+    @include desktop {
+        justify-content: center;
+    }
+}
 
 .comment-wrapper__comment {
     padding: 20px;
@@ -142,17 +188,18 @@ button {
 
 .comment-wrapper {
     border-bottom: 1px solid $secondary-colorMercury;
-    width:  90%;
+    width:  95%;
         margin-left: auto;
         margin-right: auto;
+
 }
 
 
 .wrapper__avatar {
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
-
+    // padding-bottom: 30px; 
+    margin-top: 1.25rem;
 }
 
 
@@ -174,7 +221,8 @@ button {
     min-width: 150px;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 30px;
+    width: 30%;
+    // padding-bottom: 30px;
 }
 }
 
@@ -182,7 +230,7 @@ button {
 
     color: #FFF;
     border: none;
-    padding: 1rem 3rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
+    padding: 1rem 5rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
     cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
     font-size: 1.3125rem;
     font-family: "Open Sans";
@@ -195,12 +243,14 @@ button {
 .form-section__header {
     font-size: 1.875rem; 
     padding: 1.25rem;
+
+    @include desktop {
+
+        padding-right: 300px; 
+        font-size: 50px;
+        font-weight: 500;
+    }
 }
-
-
-
-
-
 
 
 
@@ -211,14 +261,15 @@ Hero-section
 __________________________*/ 
 
 .hero {
-    background-image: url('../assets/images/hero-bio.jpg'); 
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
+    ), url('../assets/images/hero-bio.jpg');
     @include flex-row; 
     @include hero-position; 
     justify-content: flex-start;
     padding: 0;
     padding-left: 1.875rem;
     height: 14rem;
-    opacity: 50%;
     @include tablet {
         height: 27rem; 
     } 
