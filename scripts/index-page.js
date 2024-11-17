@@ -103,36 +103,6 @@ renderAllComments();
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const nameInput = document.getElementById("itemInput");
-//     const formEl = document.querySelector("#itemForm");
-
-//     // Change border color to black when the input is focused
-//     nameInput.addEventListener('focus', () => {
-//         nameInput.classList.add('active');
-//     });
-
-//     // Change border color back to default when the input loses focus
-//     nameInput.addEventListener('blur', () => {
-//         if (nameInput.value() === '') {
-//             nameInput.classList.remove('active'); // Remove active class if empty
-//         } else {
-//             nameInput.classList.remove('error'); // Remove error class if not empty
-//         }
-//     });
-
-//     // Validate the input on form submission
-//     formEl.addEventListener('submit', (event) => {
-//         if (nameInput.value() === '') {
-//             event.preventDefault(); // Prevent form submission
-//             nameInput.classList.add('error'); // Add error class to change border color to red
-//         } else {
-//             nameInput.classList.remove('error'); // Remove error class if input is valid
-//         }
-//     });
-// });
-
-
 
 
 
