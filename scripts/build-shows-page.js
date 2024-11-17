@@ -38,6 +38,19 @@ const showHeader = document.createElement('h1');
 showHeader.classList.add ('show-section__header'); 
 showHeader.textContent = "Shows"; 
 mainShow.appendChild(showHeader); 
+const topRow = document.createElement('article');
+topRow.classList.add('show-section__top-row');
+const dateTop = document.createElement('p');
+dateTop.textContent = "DATE"; 
+const VenueTop = document.createElement('p')
+VenueTop.textContent = "VENUE"; 
+const locationTop = document.createElement('p'); 
+locationTop.textContent = "LOCATION";
+
+mainShow.appendChild(topRow);
+topRow.appendChild(dateTop); 
+topRow.appendChild(VenueTop); 
+topRow.appendChild(locationTop); 
 
 
 function createShowCard(showCardInfo) {
@@ -115,4 +128,3 @@ cardButton.href = "#";
 cardInfo.forEach(showCardInfo => {
     createShowCard(showCardInfo);
 });
-

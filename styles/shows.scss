@@ -25,12 +25,40 @@
 }
 }
 
+.show-section__top-row{
+    display: none;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-right: 450px;
+        color: $secondary-colorMercury;
+        padding-top: 2.5rem; 
+        font-size: 1.875rem;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly; 
+        padding-right: 15.625rem;
+        color: $secondary-colorMercury;
+    }
+}
+
+
+
+
 #hero-section__title {
     font-size: 20px;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     @include tablet {
         font-size: 1.875rem
+    }
+    @include desktop {
+        padding-left: 6.25rem;
+        padding-top: 5rem;
     }
 }
 
@@ -41,15 +69,23 @@
     }
     @include desktop {
         font-size: 4rem;
+        padding-left: 100px;
     }
 }
 
 
 .hero-section__wrapper {
     @include desktop {
-        justify-content: flex-start;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        
     }
 }
+
+
 iframe {
     padding: 20px; 
     width: 100%; 
@@ -57,10 +93,7 @@ iframe {
         width: 50%;
     }
     @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -72,30 +105,22 @@ iframe {
     font-weight: 100;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     text-overflow: ellipsis;
-    // line-break: anywhere;
     word-break: normal;
     overflow: hidden;
     white-space: nowrap;    
 
     @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end; 
-        height: auto;
+        height: 280px;
         padding-right: 6.25rem; 
-        
+        width: 100%;
+        width: 100%;
     }
 
 }
 
-
-
-
-
 .show-section__header {
     padding-top: 3.125rem;
     padding-left: 1.875rem;
-    // padding-bottom: 30px;
     font-size: 46px;
     display: flex; 
 
@@ -172,28 +197,21 @@ section.shows-section {
 
 .show-section__location--content {
     font-size: 1.25rem;
-    // padding-bottom: 1.5625rem;
-    // padding-bottom: 40px;
     padding-bottom: 12px;
 }
 
 .show-section__button {
     padding-top: 1.875rem;
     padding-bottom: 1.25rem;
-    // position: relative; /* To keep it on top of the border, it is applied relative to the objects around it */
-    // z-index: 1;
-    // padding: 0.625rem 1.25rem;
     font-size: 1rem;
     cursor: pointer;
     width: 90%;
-    border-radius: 5px; /* leaving this in px instead of rem because it is border, and we dont want the borders to change when the user zooms in */ 
+    border-radius: 5px; 
 @include tablet {
     min-width: 150px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 30px;
-    // padding-left: 6.25rem;
-    // padding-right: 6.25rem;
     padding-top: .9375rem;
     padding-bottom: .9375rem;
     width: 30%;
@@ -204,8 +222,7 @@ a.show-section__button  {
     background-color: $primary-colorBlack;
     color: #FFF;
     border: none;
-    // padding: 1rem 7rem; /* this range of padding is good for designing buttons and you can use it alongside inline blocks*/
-    cursor: pointer; /* this will change the cursor to a pointer when you hover over the button */
+    cursor: pointer;
     font-size: 1.3125rem;
     font-weight: 500;
     text-align: center;
