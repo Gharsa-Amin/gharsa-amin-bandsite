@@ -105,7 +105,7 @@ body {
     padding-bottom: 0;
   }
 }
-.header__item-first {
+.header__item--biography {
   list-style: none;
   padding: 0;
   text-decoration: none;
@@ -115,22 +115,22 @@ body {
   color: #FFFFFF;
   padding-right: 6.25rem;
 }
-.header__item-first:hover {
+.header__item--biography:hover {
   border-bottom: 0.4125rem solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
-  .header__item-first {
+  .header__item--biography {
     font-size: 1.5625rem;
   }
 }
-.header__item-second {
+.header__item--shows {
   list-style: none;
   padding: 0;
   text-decoration: none;
   font-size: 1.25rem;
   color: #E1E1E1;
 }
-.header__item-second:hover {
+.header__item--shows:hover {
   border-bottom: 0.4125rem solid #FFFFFF;
 }
 

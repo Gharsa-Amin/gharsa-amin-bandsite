@@ -75,7 +75,7 @@ body {
                 }
             }
     
-    &__item-first {
+    &__item--biography {
                 @include list-style; 
                 padding-bottom: 0.44rem;
                 padding-top: .75rem;
@@ -91,7 +91,7 @@ body {
     
                 }
     
-    &__item-second {
+    &__item--shows {
             @include list-style; 
             font-size: 1.25rem;
             color: $secondary-colorMercury;
