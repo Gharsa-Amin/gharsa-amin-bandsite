@@ -9,15 +9,15 @@ class BandSiteApi  {
     async postComment(comment) {
         const url = `$(this.baseUrl)comments?api_key=${this.apiKey}`; 
         try {
-            const response = await axios 
+            const response = await axios.post(url, comment); 
+            return response.data
             
         } catch (error) {
+            console.log("Failed posting your comments")
             
         }
     }
 } 
-
-
 
 
 
