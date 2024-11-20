@@ -78,6 +78,7 @@ const handleSubmit = async (event) => {
 
 formEl.addEventListener("submit", handleSubmit);
 
+//newly added comments still showup on the page, and prepend is not making the comments showup to the top. Need to use unshift somewhere?
 
 
 
