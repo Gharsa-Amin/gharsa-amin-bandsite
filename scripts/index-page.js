@@ -3,7 +3,7 @@ console.log(bandApi);
 
 async function renderComments() {
     const comments = await bandApi.getComments(); 
-
+    comments.reverse()
     const commentSection = document.getElementById("dynamicContent");
     commentSection.innerHTML = ""; 
 
