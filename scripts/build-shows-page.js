@@ -3,6 +3,18 @@ const showAPi = new BandSiteApi("2886777c-3308-49eb-af29-c97d7b690a3e");
 const mainShow = document.querySelector(".shows-section");
 
 
+function formatDate(dateString) {
+    const options = {
+        weekday: 'short', 
+        month: 'short', 
+        day: '2-digit', 
+        year: 'numeric' 
+    };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options);
+}
+
+
 function createShowCard(showData) {
     const cardEl = document.createElement('article');
     cardEl.classList.add('ShowCardInfo');
@@ -16,7 +28,8 @@ function createShowCard(showData) {
     dateTitle.textContent = "DATE";
     const dateContent = document.createElement('p');
     dateContent.classList.add('show-section__date--content');
-    dateContent.textContent = new Date(showData.date).toLocaleDateString(); 
+    dateContent.textContent = formatDate(showData.date);
+    // dateContent.textContent = new Date(showData.date).toLocaleDateString(); 
     cardDate.appendChild(dateTitle);
     cardDate.appendChild(dateContent);
 
@@ -52,7 +65,7 @@ function createShowCard(showData) {
     const cardButton = document.createElement('a');
     cardButton.classList.add('show-section__button');
     cardButton.textContent = "BUY TICKETS";
-    cardButton.href = showData.ticketUrl || "#"; 
+    // cardButton.href = showData.ticketUrl || "#"; 
 
     cardEl.appendChild(cardDate);
     cardEl.appendChild(cardVenue);
