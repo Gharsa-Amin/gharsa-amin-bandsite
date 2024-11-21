@@ -2,7 +2,6 @@ const showAPi = new BandSiteApi("2886777c-3308-49eb-af29-c97d7b690a3e");
 
 const mainShow = document.querySelector(".shows-section");
 
-
 function formatDate(dateString) {
     const options = {
         weekday: 'short', 
@@ -13,6 +12,25 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', options);
 }
+
+const showHeader = document.createElement('h1');  // 2nd step: creating the class type 
+showHeader.classList.add ('show-section__header'); // 3rd: Naming the actual class and adding it within your step 2 (like <section class ="Learning-Javascript")
+showHeader.textContent = "Shows";  //step four: embedding the content of the class within the class by using textContent. 
+mainShow.appendChild(showHeader); 
+
+const topRow = document.createElement('article'); // this class will only be used in desktop and tablet layouts. 
+topRow.classList.add('show-section__top-row');
+const dateTop = document.createElement('p');
+dateTop.textContent = "DATE"; 
+const VenueTop = document.createElement('p')
+VenueTop.textContent = "VENUE"; 
+const locationTop = document.createElement('p'); 
+locationTop.textContent = "LOCATION";
+
+mainShow.appendChild(topRow);    //step 5: appending the children to its direct parent. 
+topRow.appendChild(dateTop); 
+topRow.appendChild(VenueTop); 
+topRow.appendChild(locationTop); 
 
 
 function createShowCard(showData) {
