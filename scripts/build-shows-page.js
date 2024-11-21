@@ -47,7 +47,6 @@ function createShowCard(showData) {
     const dateContent = document.createElement('p');
     dateContent.classList.add('show-section__date--content');
     dateContent.textContent = formatDate(showData.date);
-    // dateContent.textContent = new Date(showData.date).toLocaleDateString(); 
     cardDate.appendChild(dateTitle);
     cardDate.appendChild(dateContent);
 
@@ -83,7 +82,6 @@ function createShowCard(showData) {
     const cardButton = document.createElement('a');
     cardButton.classList.add('show-section__button');
     cardButton.textContent = "BUY TICKETS";
-    // cardButton.href = showData.ticketUrl || "#"; 
 
     cardEl.appendChild(cardDate);
     cardEl.appendChild(cardVenue);

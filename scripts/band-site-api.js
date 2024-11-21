@@ -46,7 +46,20 @@ class BandSiteApi {
             console.error("Failed to post comment:", error);
         }
     }
-}
+
+    async likeComment(){
+        const url =`${this.baseUrl}comments/:id/like?api_key=${this.apiKey}`; 
+
+        try {
+            const response = await axios.get(url); 
+            return response.data; 
+        }
+        catch (error) {
+            console.error("Could not add your likes!")
+        }
+        }
+    }
+
 
 
 
