@@ -337,6 +337,307 @@ footer {
   }
 }
 
+/* -----------------
+Hero-section 
+__________________________*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+  padding: 0;
+  padding-left: 1.875rem;
+  height: 14rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 27rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 40rem;
+  }
+}
+.hero__opacity {
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero__title {
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+}
+
+/*--------------------
+Bio-section
+------------------------*/
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .bio-section {
+    display: flex;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+.bio-section__image {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__image {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .bio-section__image {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+.bio-section__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #323232;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__heading {
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .bio-section__heading {
+    font-size: 2.7rem;
+    padding-bottom: 3.2rem;
+    padding-top: 2.2rem;
+  }
+}
+.bio-section__quotes {
+  font-size: 1.0938rem;
+  line-height: 1.8125rem;
+  color: #323232;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__quotes {
+    padding-left: 2.1875rem;
+    font-size: 1.5313rem;
+    line-height: 1.875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section__quotes {
+    padding-left: 6rem;
+    padding-right: 8rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    padding-top: 1.875rem;
+  }
+}
+.bio-section__quotes-modifier {
+  font-size: 1.125rem;
+  padding-bottom: 1.5625rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__quotes-modifier {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section__quotes-modifier {
+    font-size: 1.5rem;
+    padding-top: 0.625rem;
+    font-weight: 500;
+  }
+}
+.bio-section__sub-heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding-bottom: 1.125rem;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__sub-heading {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2.1875rem;
+    padding-top: 1.5rem;
+    font-size: 1.5625rem;
+    padding-bottom: 1.625rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section__sub-heading {
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+    padding-top: 2.5rem;
+    font-size: 1.875rem;
+  }
+}
+.bio-section .p-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .bio-section .p-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 2.1875rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .bio-section .p-container {
+    padding-left: 5rem;
+  }
+}
+.bio-section__paragraph-one {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__paragraph-one {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .bio-section__paragraph-one {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+}
+.bio-section__paragraph-two {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #323232;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .bio-section__paragraph-two {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    padding-left: 1.875rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section__paragraph-two {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+}
+
+/*--------------------
+Album-section
+------------------------*/
+.album-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.25rem;
+  background-color: #FAFAFA;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .album-section {
+    display: flex;
+    justify-content: center;
+    padding: 2.25rem;
+    padding-top: 2.875rem;
+  }
+}
+.album-section__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.875rem;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .album-section__heading {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .album-section__heading {
+    font-size: 3.4rem;
+    padding-top: 2.25rem;
+  }
+}
+.album-section__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.25rem; /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
+  filter: grayscale(100%);
+}
+.album-section__details:hover { /*https://robinroelofsen.com/change-images-grayscale-color-hover */
+  filter: grayscale(0) !important;
+}
+@media screen and (min-width: 768px) {
+  .album-section__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .album-section__details {
+    padding-top: 2.25rem;
+    padding-left: 1rem;
+  }
+}
+.album-section__image {
+  width: 100%; /* if i set the width to be a 100%, and set the parent class to be in columns, it will occupy 100% of the availble space in mobile layout, in order to change that for other screens, I have to set the parent container to be flex direction row, and give it a width of 30%, so I can create an album where there are three pictures per row */
+}
+@media screen and (min-width: 768px) {
+  .album-section__image {
+    max-width: 30%;
+  }
+}
+
 /* ---------------------
 Form-section
 __________________________*/
@@ -595,306 +896,5 @@ button {
 @media screen and (min-width: 768px) {
   .comment-wrapper__comment {
     font-size: 1.5rem;
-  }
-}
-
-/* -----------------
-Hero-section 
-__________________________*/
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-shows.jpg");
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-  position: relative;
-  justify-content: flex-start;
-  padding: 0;
-  padding-left: 1.875rem;
-  height: 14rem;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 27rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 40rem;
-  }
-}
-.hero__opacity {
-  background: rgba(0, 0, 0, 0.5); /*opacity adds a different layer of color on top of an image */
-}
-.hero__title {
-  font-size: 2rem;
-  line-height: 2rem;
-  color: #FFFFFF;
-  margin-bottom: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .hero__title {
-    font-size: 3.75rem;
-    font-weight: 500;
-  }
-}
-
-/*--------------------
-Bio-section
-------------------------*/
-.bio-section {
-  display: flex;
-  flex-direction: column;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .bio-section {
-    display: flex;
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
-  }
-}
-.bio-section__image {
-  width: 100%; /* a 100% width for the mobile version gives the screen the full width, with padding added to otherscreens the layout can become smaller */
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__image {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1280px) {
-  .bio-section__image {
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-}
-.bio-section__heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-size: 1.875rem;
-  line-height: 2rem;
-  padding-top: 1.8rem;
-  padding-bottom: 1rem;
-  color: #323232;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__heading {
-    padding-bottom: 1.875rem;
-    padding-top: 1.875rem;
-    font-size: 2.25rem;
-    font-weight: 700;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1280px) {
-  .bio-section__heading {
-    font-size: 2.7rem;
-    padding-bottom: 3.2rem;
-    padding-top: 2.2rem;
-  }
-}
-.bio-section__quotes {
-  font-size: 1.0938rem;
-  line-height: 1.8125rem;
-  color: #323232;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__quotes {
-    padding-left: 2.1875rem;
-    font-size: 1.5313rem;
-    line-height: 1.875rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bio-section__quotes {
-    padding-left: 6rem;
-    padding-right: 8rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    padding-top: 1.875rem;
-  }
-}
-.bio-section__quotes-modifier {
-  font-size: 1.125rem;
-  padding-bottom: 1.5625rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__quotes-modifier {
-    font-size: 1rem;
-    padding-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bio-section__quotes-modifier {
-    font-size: 1.5rem;
-    padding-top: 0.625rem;
-    font-weight: 500;
-  }
-}
-.bio-section__sub-heading {
-  font-size: 1.125rem;
-  font-weight: 500;
-  padding-bottom: 1.125rem;
-  color: #323232;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__sub-heading {
-    display: flex;
-    flex-direction: row;
-    padding-left: 2.1875rem;
-    padding-top: 1.5rem;
-    font-size: 1.5625rem;
-    padding-bottom: 1.625rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bio-section__sub-heading {
-    padding-left: 5rem;
-    padding-bottom: 3rem;
-    padding-top: 2.5rem;
-    font-size: 1.875rem;
-  }
-}
-.bio-section .p-container {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .bio-section .p-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 2.1875rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1280px) {
-  .bio-section .p-container {
-    padding-left: 5rem;
-  }
-}
-.bio-section__paragraphfirst {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.375rem;
-  color: #323232;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__paragraphfirst {
-    display: flex;
-    flex-direction: row;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5625rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1280px) {
-  .bio-section__paragraphfirst {
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-}
-.bio-section__paragraphsecond {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.375rem;
-  color: #323232;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .bio-section__paragraphsecond {
-    display: flex;
-    flex-direction: row;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5625rem;
-    padding-left: 1.875rem;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bio-section__paragraphsecond {
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-}
-
-/*--------------------
-Album-section
-------------------------*/
-.album-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 1.25rem;
-  background-color: #FAFAFA;
-  color: #323232;
-}
-@media screen and (min-width: 768px) {
-  .album-section {
-    display: flex;
-    justify-content: center;
-    padding: 2.25rem;
-    padding-top: 2.875rem;
-  }
-}
-.album-section__heading {
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-size: 1.875rem;
-  padding-bottom: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .album-section__heading {
-    font-size: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .album-section__heading {
-    font-size: 3.4rem;
-    padding-top: 2.25rem;
-  }
-}
-.album-section__details {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1.25rem; /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
-  filter: grayscale(100%);
-}
-.album-section__details:hover { /*https://robinroelofsen.com/change-images-grayscale-color-hover */
-  filter: grayscale(0) !important;
-}
-@media screen and (min-width: 768px) {
-  .album-section__details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.625rem;
-    width: 100%;
-    flex-direction: row;
-    gap: 1.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .album-section__details {
-    padding-top: 2.25rem;
-    padding-left: 1rem;
-  }
-}
-.album-section__image {
-  width: 100%; /* if i set the width to be a 100%, and set the parent class to be in columns, it will occupy 100% of the availble space in mobile layout, in order to change that for other screens, I have to set the parent container to be flex direction row, and give it a width of 30%, so I can create an album where there are three pictures per row */
-}
-@media screen and (min-width: 768px) {
-  .album-section__image {
-    max-width: 30%;
   }
 }/*# sourceMappingURL=bio.css.map */

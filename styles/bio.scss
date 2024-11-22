@@ -3,6 +3,273 @@
 @use './partials/variables' as *;
 @use './partials/typography' as *;
 
+/* -----------------
+Hero-section 
+__________________________*/ 
+
+.hero {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
+    ), url('../assets/images/hero-bio.jpg');
+    @include flex-row; 
+    @include hero-position; 
+    justify-content: flex-start;
+    padding: 0;
+    padding-left: 1.875rem;
+    height: 14rem;
+    @include tablet {
+        height: 27rem; 
+    } 
+    @include desktop {
+        height: 40rem;
+    }
+
+&__opacity { 
+    background: rgba(0, 0, 0, 0.5);
+}
+&__title {
+    font-size: 2rem; 
+    line-height: 2rem; 
+    color: $primary-colorWhite; 
+    margin-bottom: 1.25rem;
+
+    @include tablet {
+        font-size: 3.75rem;
+        font-weight: 500;
+    }
+}
+}
+
+/*--------------------
+Bio-section
+------------------------*/ 
+
+.bio-section { 
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    
+
+    @include tablet {
+        display: flex;
+        padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+
+&__image {
+    width: 100%;
+    padding-bottom: 1rem;
+    @include tablet {
+        padding-left: 3rem; 
+        padding-right: 3rem;
+
+    @include desktop {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+    }
+}
+
+&__heading {  
+    @include flex-start; 
+    color: $primary-colorBlack;
+    font-weight: 700;
+    font-size: 1.875rem; 
+    line-height: 2rem; 
+    padding-top: 1.8rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem; ;
+    font-size: 2.25rem;
+    font-weight: 700; 
+
+    @include desktop {
+        font-size: 2.7rem; 
+        padding-bottom: 3.2rem;
+        padding-top: 2.2rem;
+    }
+}
+}
+&__quotes {
+    font-size: 1.0938rem; 
+    line-height: 1.8125rem ; 
+    color: $primary-colorBlack;
+    padding-bottom: 0.4rem; 
+    font-weight: 600;
+
+    @include tablet {
+        padding-left: 2.1875rem;
+        font-size: 1.5313rem;
+        line-height: 1.875rem;
+    }
+    @include desktop {
+        padding-left: 6rem;
+        padding-right: 8rem;
+        font-size: 1.75rem; 
+        line-height: 2rem;
+        padding-top: 1.875rem; 
+    }
+}
+&__quotes-modifier {
+font-size: 1.125rem;
+padding-bottom: 1.5625rem;
+font-weight: 600;
+@include tablet{
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+@include desktop {
+    font-size: 1.5rem;
+    padding-top: .625rem;
+    font-weight: 500;
+}
+}
+
+&__sub-heading {
+    font-size: 1.125rem;
+    font-weight: 500; 
+    padding-bottom: 1.125rem;
+    color: $primary-colorBlack;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        padding-left: 2.1875rem;
+        padding-top: 1.5rem;
+        font-size: 1.5625rem;
+        padding-bottom: 1.625rem; 
+
+    }
+    @include desktop {
+        padding-left: 5rem;
+        padding-bottom: 3rem; 
+        padding-top: 2.5rem;
+        font-size: 1.875rem;
+    }
+
+}
+.p-container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+    @include flex-row; 
+    padding-left: 2.1875rem;
+    @include desktop{
+        padding-left: 5rem;
+    }
+}
+}
+&__paragraph-one {
+    
+    font-size: .875rem; 
+    font-weight: 400;
+    line-height: 1.375rem; 
+    color: $primary-colorBlack; 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5625rem;
+
+        @include desktop {
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+    }
+}
+&__paragraph-two {
+    font-size: .875rem; 
+    font-weight: 400;
+    line-height: 1.375rem;  
+    color: $primary-colorBlack;
+    padding-bottom: 1.5rem;   
+    padding-top: 1.5rem; 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5625rem;
+        padding-left: 1.875rem;
+        padding-top: 0; 
+        padding-bottom: 0; 
+
+    }
+    @include desktop {
+        font-size: 1.3rem;
+        line-height: 2rem; 
+    }
+}
+}
+/*--------------------
+Album-section
+------------------------*/
+.album-section {
+    @include flex-start; 
+    padding: 1.25rem;
+    background-color: $secondary-colorAlabaster;
+    color: $primary-colorBlack; 
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        padding: 2.25rem;
+        padding-top: 2.875rem;
+    }
+
+&__heading {
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.875rem; 
+    padding-bottom: 1.5rem; 
+
+    @include tablet {
+        font-size: 2.25rem; 
+    }
+    @include desktop {
+        font-size: 3.4rem;
+        padding-top: 2.25rem; 
+    }
+
+}
+
+&__details {
+    @include flex-start; 
+    gap: 1.25rem; 
+    -webkit-filter: grayscale(100%); /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
+    filter: grayscale(100%);
+    &:hover {
+        -webkit-filter: grayscale(0) !important; /*https://robinroelofsen.com/change-images-grayscale-color-hover */
+        filter: grayscale(0) !important;
+    }
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        width: 100%;
+        flex-direction: row;
+        gap: 1.75rem;
+    }
+    @include desktop {
+        padding-top: 2.25rem;
+        padding-left: 1rem;
+    }
+}
+
+&__image { 
+width: 100%; /* if i set the width to be a 100%, and set the parent class to be in columns, it will occupy 100% of the availble space in mobile layout, in order to change that for other screens, I have to set the parent container to be flex direction row, and give it a width of 30%, so I can create an album where there are three pictures per row */ 
+@include tablet {
+    max-width: 30%;
+    
+}
+}
+}
+
+
 /* ---------------------
 Form-section
 __________________________*/ 
@@ -220,7 +487,6 @@ button {
         font-size: 1rem;
     
         @include tablet {
-            // margin: 1.875rem;
             padding-left: 26rem; 
             font-size: 1.8rem;
         }
@@ -254,274 +520,6 @@ button {
 
 
 
-
-
-
-/* -----------------
-Hero-section 
-__________________________*/ 
-
-.hero {
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 
-    ), url('../assets/images/hero-shows.jpg');
-    @include flex-row; 
-    @include hero-position; 
-    justify-content: flex-start;
-    padding: 0;
-    padding-left: 1.875rem;
-    height: 14rem;
-    @include tablet {
-        height: 27rem; 
-    } 
-    @include desktop {
-        height: 40rem;
-    }
-
-&__opacity { 
-    background: rgba(0, 0, 0, 0.5); /*opacity adds a different layer of color on top of an image */ 
-}
-&__title {
-    font-size: 2rem; 
-    line-height: 2rem; 
-    color: $primary-colorWhite; 
-    margin-bottom: 1.25rem;
-
-    @include tablet {
-        font-size: 3.75rem;
-        font-weight: 500;
-    }
-}
-}
-
-
-/*--------------------
-Bio-section
-------------------------*/ 
-.bio-section { 
-    display: flex;
-    flex-direction: column;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    
-
-    @include tablet {
-        display: flex;
-        padding: 3rem 2.25rem 2.25rem 2.25rem;
-    }
-
-&__image {
-    width: 100%; /* a 100% width for the mobile version gives the screen the full width, with padding added to otherscreens the layout can become smaller */
-    padding-bottom: 1rem;
-    @include tablet {
-        padding-left: 3rem; 
-        padding-right: 3rem;
-
-    @include desktop {
-        padding-left: 7rem;
-        padding-right: 7rem;
-    }
-    }
-}
-
-&__heading {  
-    @include flex-start; 
-    font-size: 1.875rem; 
-    line-height: 2rem; 
-    padding-top: 1.8rem;
-    padding-bottom: 1rem;
-    color: $primary-colorBlack;
-    font-weight: 700;
-
-    @include tablet {
-    padding-bottom: 1.875rem;
-    padding-top: 1.875rem; ;
-    font-size: 2.25rem;
-    font-weight: 700; 
-
-    @include desktop {
-        font-size: 2.7rem; 
-        padding-bottom: 3.2rem;
-        padding-top: 2.2rem;
-    }
-}
-}
-&__quotes {
-    font-size: 1.0938rem; 
-    line-height: 1.8125rem ; 
-    color: $primary-colorBlack;
-    padding-bottom: 0.4rem; 
-    font-weight: 600;
-
-    @include tablet {
-        padding-left: 2.1875rem;
-        font-size: 1.5313rem;
-        line-height: 1.875rem;
-    }
-    @include desktop {
-        padding-left: 6rem;
-        padding-right: 8rem;
-        font-size: 1.75rem; 
-        line-height: 2rem;
-        padding-top: 1.875rem; 
-    }
-}
-&__quotes-modifier {
-font-size: 1.125rem;
-padding-bottom: 1.5625rem;
-font-weight: 600;
-@include tablet{
-    font-size: 1rem;
-    padding-bottom: 2rem;
-}
-@include desktop {
-    font-size: 1.5rem;
-    padding-top: .625rem;
-    font-weight: 500;
-}
-}
-
-&__sub-heading {
-    font-size: 1.125rem;
-    font-weight: 500; 
-    padding-bottom: 1.125rem;
-    color: $primary-colorBlack;
-
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        padding-left: 2.1875rem;
-        padding-top: 1.5rem;
-        font-size: 1.5625rem;
-        padding-bottom: 1.625rem; 
-
-    }
-    @include desktop {
-        padding-left: 5rem;
-        padding-bottom: 3rem; 
-        padding-top: 2.5rem;
-        font-size: 1.875rem;
-    }
-
-}
-.p-container {
-    display: flex;
-    flex-direction: column;
-
-    @include tablet {
-    @include flex-row; 
-    padding-left: 2.1875rem;
-    @include desktop{
-        padding-left: 5rem;
-    }
-}
-}
-&__paragraphfirst {
-    
-    font-size: .875rem; 
-    font-weight: 400;
-    line-height: 1.375rem; 
-    color: $primary-colorBlack; 
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5625rem;
-
-        @include desktop {
-            font-size: 1.3rem;
-            line-height: 2rem;
-        }
-    }
-}
-&__paragraphsecond {
-    font-size: .875rem; 
-    font-weight: 400;
-    line-height: 1.375rem;  
-    color: $primary-colorBlack;
-    padding-bottom: 1.5rem;   
-    padding-top: 1.5rem; 
-    @include tablet {
-        display: flex;
-        flex-direction: row;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5625rem;
-        padding-left: 1.875rem;
-        padding-top: 0; 
-        padding-bottom: 0; 
-
-    }
-    @include desktop {
-        font-size: 1.3rem;
-        line-height: 2rem; 
-    }
-}
-}
-/*--------------------
-Album-section
-------------------------*/
-.album-section {
-    @include flex-start; 
-    padding: 1.25rem;
-    background-color: $secondary-colorAlabaster;
-    color: $primary-colorBlack; 
-    @include tablet {
-        display: flex;
-        justify-content: center;
-        padding: 2.25rem;
-        padding-top: 2.875rem;
-    }
-
-&__heading {
-    
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-size: 1.875rem; 
-    padding-bottom: 1.5rem; 
-
-    @include tablet {
-        font-size: 2.25rem; 
-    }
-    @include desktop {
-        font-size: 3.4rem;
-        padding-top: 2.25rem; 
-    }
-
-}
-
-&__details {
-    @include flex-start; 
-    gap: 1.25rem; 
-    -webkit-filter: grayscale(100%); /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
-    filter: grayscale(100%);
-    &:hover {
-        -webkit-filter: grayscale(0) !important; /*https://robinroelofsen.com/change-images-grayscale-color-hover */
-        filter: grayscale(0) !important;
-    }
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .625rem;
-        width: 100%;
-        flex-direction: row;
-        gap: 1.75rem;
-    }
-    @include desktop {
-        padding-top: 2.25rem;
-        padding-left: 1rem;
-    }
-}
-
-&__image { 
-width: 100%; /* if i set the width to be a 100%, and set the parent class to be in columns, it will occupy 100% of the availble space in mobile layout, in order to change that for other screens, I have to set the parent container to be flex direction row, and give it a width of 30%, so I can create an album where there are three pictures per row */ 
-@include tablet {
-    max-width: 30%;
-    
-}
-}
-}
 
 
 

@@ -1,3 +1,5 @@
+import BandSiteApi from "./band-site-api.js";
+
 const showAPi = new BandSiteApi("2886777c-3308-49eb-af29-c97d7b690a3e"); 
 
 const mainShow = document.querySelector(".shows-section");
