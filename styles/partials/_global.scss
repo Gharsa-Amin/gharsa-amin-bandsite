@@ -2,7 +2,6 @@
 @use 'mixin' as *; 
 @use 'variables' as *; 
 
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -39,7 +38,6 @@ body {
             margin-top: 1rem;
             padding: 0;
             @include flex-column; 
-    
             @include tablet {
                 padding-right: 6.25rem;
                 padding-left: 3.125rem;
@@ -152,7 +150,7 @@ footer {
             gap: 3.125rem;
             padding-left: 1.25rem;
             padding-top: 1.875rem; 
-            padding-bottom: 1.875rem;
+            // padding-bottom: 1.875rem;
         @include tablet {
             padding-left: 1.5625rem; 
             justify-content: space-around;
@@ -165,8 +163,9 @@ footer {
     
         
 &__logo {
-    padding-left: 1.25rem;
+    display: none;
     @include tablet {
+        display: flex;
         padding-left: 1.5625rem; 
         justify-content: space-around;
         padding-top: 2.875rem;
@@ -179,6 +178,14 @@ footer {
     }
 }
 
+&__bottom-logo {
+    padding-left: 1.25rem; 
+    padding-top: 3.6rem;
+
+    @include tablet {
+        display: none
+    }
+}
 
 &__middle{ /* in this section, if you visualize, all the elements are the same, easier to apply the same class names across the three sections to keey the code DRY */ 
     @include flex-start; 
@@ -263,7 +270,7 @@ padding-bottom: 1.25rem;
 }
 
 &__text {
-padding-top: 1.875rem; 
+padding-top: 1rem; 
 padding-bottom: 1.875rem;
 padding-left: 1.25rem;
     @include tablet {

@@ -5,26 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styles/bio.css" />
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<!-- <script src="./scripts/band-site-api.js" defer></script>  -->
-		<script src="./scripts/index-page.js" type="module"></script>  
+		<script src="./scripts/index-page.js" type="module"></script>
 
 		<title>Document</title>
 	</head>
 	<body>
 		<!--Header-section-->
-		<header class="header"> 
+		<header class="header">
 			<nav class="header__nav">
 				<a href="./index.html" class="header__logo">
 					<img
 						src="./assets/logos/Logo-bandsite.svg"
-						width="150px 
 						alt="Bandsite Logo"
 						class="header__logo-image"
 				/></a>
 				<ul class="header__list">
 					<li class="header__item">
-						<a class="header__item--biography" href="./index.html" >Biography</a> 
-						<!-- //pecific to what it is; make it more descriptive and what it does.  -->
+						<a class="header__item--biography" href="./index.html">Biography</a>
 					</li>
 					<li class="header__item">
 						<a class="header__item--shows" href="./pages/shows.html">Shows</a>
@@ -35,8 +32,7 @@
 
 		<!--Hero-Section-->
 		<main class="main">
-			<div class="hero__opacity"> 
-				<!-- // overlay!more descriptive  --> 
+			<div class="hero__overlay">
 				<section class="hero">
 					<h1 class="hero__title">The Bees Knees</h1>
 				</section>
@@ -54,9 +50,9 @@
 				</div>
 				<p class="bio-section__quotes">
 					“We push each other to be the best. It’s not uncommon for one of us to
-					say ‘this needs to be better, back to the drawing board’.”
+					say ‘this needs to be better, back to the drawing board’”
 				</p>
-				<p class="bio-section__quotes bio-section__quotes-modifier"> 
+				<p class="bio-section__quotes bio-section__quotes-modifier">
 					- Lead vocalist of The Bees Knees
 				</p>
 
@@ -141,92 +137,128 @@
 					/>
 				</article>
 			</section>
-		</main>
-<section class="form-hero">
-	<section class="form-section__conversations">
-		<h1 class="form-section__header">Join the Conversation</h1>
-		<div class="image-wrapper">
-			<img src="./assets/images/Mohan-muruge.jpg"  alt="avatar image"  class="item-image"></div>
-		<form id="itemForm">  
-			<article class="border-bottom"> 
-			<label class="item-name" for="itemInput">NAME
-			<input type="text" id="itemInput"  name="itemInput" placeholder="Enter Your Name"class="item-name" required/></label>
-			
-			<label class="item-comment" for="itemComment">COMMENT
-			<textarea name="itemComment" id="itemComment" placeholder="Add a new comment" required></textarea></label>
-			<div class="button-container">
-			<button type="submit">COMMENT</button>
-		</div>
-			</article>
-		</form>
-	</section>
-		<ul id="dynamicContent">
-		</ul>
-	</section> 
-<footer class="footer-section">
-                <div class="footer-section__media">
-                    <h2 class="footer-section__heading">Get In Touch</h2>
-                    <div class="footer-section__images">
-							<a href="https://www.instagram.com/" target="_blank">
-								<img
-									class="footer__image"
-									src="./assets/icons/SVG/Icon-instagram.svg"
-									alt="Instagram icon"
-							/>
-							</a>
-							<a href="https://www.Facebook.com/" target="_blank">
-								<img
-									class="footer__image"
-									src="./assets/icons/SVG/Icon-facebook.svg"
-									alt="Facebook icon"
-							/></a>
-							<a href="https://www.twitter.com/" target="_blank">
-								<img
-									class="footer__image"
-									src="./assets/icons/SVG/Icon-twitter.svg"
-									alt="Twitter icon"
-							/></a>
-						</div>
-                    
-                    <a class="footer-section__logo" href="./index.html"><img src="./assets/logos/Logo-bandsite.svg" alt="bandsite logo"></a>
-				</div>
-                <div class="footer-section__middle">
-                    <section class="footer-section__contact">
-                        <article class="footer-section__top">
-                            <h4 class="footer-section__entity">The Bees Knees Management</h4>
+			<!-- </main> -->
+			<section class="form-hero">
+				<section class="form-section__conversations">
+					<h1 class="form-section__header">Join the Conversation</h1>
+					<div class="image-wrapper">
+						<img
+							src="./assets/images/Mohan-muruge.jpg"
+							alt="avatar image"
+							class="item-image"
+						/>
+					</div>
+					<form id="itemForm">
+						<article class="border-bottom">
+							<label class="item-name" for="itemInput"
+								>NAME
+								<input
+									type="text"
+									id="itemInput"
+									name="itemInput"
+									placeholder="Enter Your Name"
+									class="item-name"
+									required
+							/></label>
+
+							<label class="item-comment" for="itemComment"
+								>COMMENT
+								<textarea
+									name="itemComment"
+									id="itemComment"
+									placeholder="Add a new comment"
+									required
+								></textarea>
+							</label>
+							<div class="button-container">
+								<button type="submit">COMMENT</button>
+							</div>
 						</article>
-                        <address class="footer-section__entityAddress"> 503 Broadway Penthouse,
-								<br> New York, NY 10012, USA
-                        </address>
-                        <a href="mailto:info@thebeesknees.com" class="footer-section__email">info@thebeesknees.com </a>
+					</form>
+				</section>
+				<ul id="dynamicContent"></ul>
+			</section>
+			<footer class="footer-section">
+				<div class="footer-section__media">
+					<h2 class="footer-section__heading">Get In Touch</h2>
+					<div class="footer-section__images">
+						<a href="https://www.instagram.com/" target="_blank">
+							<img
+								class="footer__image"
+								src="./assets/icons/SVG/Icon-instagram.svg"
+								alt="Instagram icon"
+							/>
+						</a>
+						<a href="https://www.Facebook.com/" target="_blank">
+							<img
+								class="footer__image"
+								src="./assets/icons/SVG/Icon-facebook.svg"
+								alt="Facebook icon"
+						/></a>
+						<a href="https://www.twitter.com/" target="_blank">
+							<img
+								class="footer__image"
+								src="./assets/icons/SVG/Icon-twitter.svg"
+								alt="Twitter icon"
+						/></a>
+					</div>
+
+					<a class="footer-section__logo" href="./index.html"
+						><img src="./assets/logos/Logo-bandsite.svg" alt="bandsite logo"
+					/></a>
+				</div>
+				<div class="footer-section__middle">
+					<section class="footer-section__contact">
+						<article class="footer-section__top">
+							<h4 class="footer-section__entity">The Bees Knees Management</h4>
+						</article>
+						<address class="footer-section__entityAddress">
+							503 Broadway Penthouse, <br />
+							New York, NY 10012, USA
+						</address>
+						<a href="mailto:info@thebeesknees.com" class="footer-section__email"
+							>info@thebeesknees.com
+						</a>
 					</section>
 
-                    <section class="footer-section__contact">
-                        <article class="footer-section__top">
-                            <h4 class="footer-section__entity">Limitless Artist Group</h4>
+					<section class="footer-section__contact">
+						<article class="footer-section__top">
+							<h4 class="footer-section__entity">Limitless Artist Group</h4>
 						</article>
-                        <address class="footer-section__entityAddress">Booking Agent for
-							<br>
+						<address class="footer-section__entityAddress">
+							Booking Agent for
+							<br />
 							US / South America / Japan
 						</address>
-                        
-						<a href="mailto:bookings@limitlessag.com" class="footer-section__email">bookings@limitlessag.com</a>
-        
-                    </section>
-                    <section class="footer-section__contact">
-                        <article class="footer-section__top">
-                            <h4 class="footer-section__entity">ARCH Entertainment</h4>
-						</article>
-                        <address class="footer-section__entityAddress">Booking Agent for<br>UK / EU / AU</address>
-                        <a href="mailto:bookings@archentertainment.com" class="footer-section__email">bookings@archentertainment.com
-                </a>
-			</section>
-		</div>
-                <p class="footer-section__text">Copyright The Bees Knees © 2023 All Rights Reserved
-				</p>
-        </footer>
-    </main>
-	</body> 
 
-	
+						<a
+							href="mailto:bookings@limitlessag.com"
+							class="footer-section__email"
+							>bookings@limitlessag.com</a
+						>
+					</section>
+					<section class="footer-section__contact">
+						<article class="footer-section__top">
+							<h4 class="footer-section__entity">ARCH Entertainment</h4>
+						</article>
+						<address class="footer-section__entityAddress">
+							Booking Agent for<br />UK / EU / AU
+						</address>
+						<a
+							href="mailto:bookings@archentertainment.com"
+							class="footer-section__email"
+							>bookings@archentertainment.com
+						</a>
+					</section>
+
+					<a class="footer-section__bottom-logo" href="./index.html"
+						><img src="./assets/logos/Logo-bandsite.svg" alt="bandsite logo"
+					/></a>
+				</div>
+				<p class="footer-section__text">
+					Copyright The Bees Knees © 2023 All Rights Reserved
+				</p>
+			</footer>
+		</main>
+	</body>
 </html>

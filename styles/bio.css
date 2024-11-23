@@ -191,7 +191,6 @@ footer {
   gap: 3.125rem;
   padding-left: 1.25rem;
   padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
 }
 @media screen and (min-width: 768px) {
   .footer-section__images {
@@ -203,10 +202,11 @@ footer {
   }
 }
 .footer-section__logo {
-  padding-left: 1.25rem;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .footer-section__logo {
+    display: flex;
     padding-left: 1.5625rem;
     justify-content: space-around;
     padding-top: 2.875rem;
@@ -218,6 +218,15 @@ footer {
 @media screen and (min-width: 768px) and (min-width: 1280px) {
   .footer-section__logo {
     padding-right: 1.25rem;
+  }
+}
+.footer-section__bottom-logo {
+  padding-left: 1.25rem;
+  padding-top: 3.6rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-section__bottom-logo {
+    display: none;
   }
 }
 .footer-section__middle { /* in this section, if you visualize, all the elements are the same, easier to apply the same class names across the three sections to keey the code DRY */
@@ -317,7 +326,7 @@ footer {
   }
 }
 .footer-section__text {
-  padding-top: 1.875rem;
+  padding-top: 1rem;
   padding-bottom: 1.875rem;
   padding-left: 1.25rem;
 }
@@ -364,7 +373,7 @@ __________________________*/
     height: 40rem;
   }
 }
-.hero__opacity {
+.hero__overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 .hero__title {
@@ -377,6 +386,11 @@ __________________________*/
   .hero__title {
     font-size: 3.75rem;
     font-weight: 500;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 7rem;
   }
 }
 
@@ -479,7 +493,6 @@ Bio-section
   }
 }
 .bio-section__sub-heading {
-  font-size: 1.125rem;
   font-weight: 500;
   padding-bottom: 1.125rem;
   color: #323232;
@@ -520,7 +533,7 @@ Bio-section
   }
 }
 .bio-section__paragraph-one {
-  font-size: 0.875rem;
+  font-size: 0.93rem;
   font-weight: 400;
   line-height: 1.375rem;
   color: #323232;
@@ -541,12 +554,12 @@ Bio-section
   }
 }
 .bio-section__paragraph-two {
-  font-size: 0.875rem;
+  font-size: 0.93rem;
   font-weight: 400;
   line-height: 1.375rem;
   color: #323232;
   padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  padding-top: 2.2rem;
 }
 @media screen and (min-width: 768px) {
   .bio-section__paragraph-two {
@@ -607,11 +620,7 @@ Album-section
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1.25rem; /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
-  filter: grayscale(100%);
-}
-.album-section__details:hover { /*https://robinroelofsen.com/change-images-grayscale-color-hover */
-  filter: grayscale(0) !important;
+  gap: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .album-section__details {
@@ -656,7 +665,7 @@ __________________________*/
 
 .item-name {
   padding-bottom: 0.3125rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .item-comment {
@@ -665,7 +674,9 @@ __________________________*/
   justify-content: center;
   align-items: flex-start;
   padding-top: 1.875rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  padding-bottom: 0.3125rem;
+  padding-left: 0.4rem;
 }
 
 .form-section__header {
@@ -704,9 +715,11 @@ __________________________*/
   font-size: 1rem;
   color: #323232;
   padding-top: 0.125rem;
-  padding-left: 0.625rem;
+  padding-left: 1rem;
   font-family: "Nunito Sans";
   color: #323232;
+  margin: 0.4rem;
+  height: 6vh;
 }
 
 #itemComment {
@@ -715,16 +728,17 @@ __________________________*/
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 7.5rem;
+  height: 20vh;
   border-radius: 0.25rem;
   border-color: #E1E1E1;
   background-color: #FAFAFA;
   color: #323232;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-top: 0.625rem;
-  padding-left: 0.625rem;
+  padding-left: 1rem;
   font-family: "Nunito Sans";
   color: #323232;
+  margin: 0.4rem;
 }
 
 .border-bottom {
@@ -766,6 +780,7 @@ __________________________*/
   width: 10%;
   padding-left: 1.25rem;
   margin-bottom: -10%;
+  position: absolute;
 }
 @media screen and (min-width: 1280px) {
   .image-wrapper {
@@ -778,6 +793,9 @@ __________________________*/
   border-radius: 50%;
   width: 2.25rem;
   height: 2.25rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .item-image {

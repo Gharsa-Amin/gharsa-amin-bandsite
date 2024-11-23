@@ -24,7 +24,7 @@ __________________________*/
         height: 40rem;
     }
 
-&__opacity { 
+&__overlay { 
     background: rgba(0, 0, 0, 0.5);
 }
 &__title {
@@ -32,10 +32,14 @@ __________________________*/
     line-height: 2rem; 
     color: $primary-colorWhite; 
     margin-bottom: 1.25rem;
-
+    
     @include tablet {
         font-size: 3.75rem;
         font-weight: 500;
+    }
+    @include desktop {
+        
+        padding-left: 7rem;
     }
 }
 }
@@ -128,7 +132,6 @@ font-weight: 600;
 }
 
 &__sub-heading {
-    font-size: 1.125rem;
     font-weight: 500; 
     padding-bottom: 1.125rem;
     color: $primary-colorBlack;
@@ -164,7 +167,7 @@ font-weight: 600;
 }
 &__paragraph-one {
     
-    font-size: .875rem; 
+    font-size: .93rem; 
     font-weight: 400;
     line-height: 1.375rem; 
     color: $primary-colorBlack; 
@@ -182,12 +185,12 @@ font-weight: 600;
     }
 }
 &__paragraph-two {
-    font-size: .875rem; 
+    font-size: 0.93rem; 
     font-weight: 400;
     line-height: 1.375rem;  
     color: $primary-colorBlack;
     padding-bottom: 1.5rem;   
-    padding-top: 1.5rem; 
+    padding-top: 2.2rem; 
     @include tablet {
         display: flex;
         flex-direction: row;
@@ -240,12 +243,6 @@ Album-section
 &__details {
     @include flex-start; 
     gap: 1.25rem; 
-    -webkit-filter: grayscale(100%); /* I can set the filter to be grayscale 100%; and apply hovering effect, where i say when you hover the image, change the color from grayscale 100 to grayscale 0%, this will change the color */
-    filter: grayscale(100%);
-    &:hover {
-        -webkit-filter: grayscale(0) !important; /*https://robinroelofsen.com/change-images-grayscale-color-hover */
-        filter: grayscale(0) !important;
-    }
     @include tablet {
         display: flex;
         flex-wrap: wrap;
@@ -269,7 +266,6 @@ width: 100%; /* if i set the width to be a 100%, and set the parent class to be 
 }
 }
 
-
 /* ---------------------
 Form-section
 __________________________*/ 
@@ -289,7 +285,7 @@ __________________________*/
 
 .item-name{
     padding-bottom: .3125rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .item-comment{
     display: flex;
@@ -297,7 +293,9 @@ __________________________*/
     justify-content: center;
     align-items: flex-start; 
     padding-top: 1.875rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 0.4rem;
 }
 
 .form-section__header {
@@ -335,25 +333,27 @@ __________________________*/
     font-size: 1rem;
     color: $primary-colorBlack;
     padding-top: .125rem; 
-    padding-left: .625rem;
+    padding-left: 1rem;
     font-family: "Nunito Sans"; 
     color: $primary-colorBlack;
+    margin: 0.4rem;
+    height: 6vh; 
 }
-
 
 #itemComment {
     @include flex-column; 
     width: 90%;
-    height: 7.5rem;
+    height: 20vh;
     border-radius: .25rem;
     border-color: $secondary-colorMercury;
     background-color: $secondary-colorAlabaster;
     color: $primary-colorBlack;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-top: .625rem;
-    padding-left: .625rem;
+    padding-left: 1rem;
     font-family: "Nunito Sans";
     color: $primary-colorBlack;
+    margin: 0.4rem; 
 
 }
 
@@ -392,7 +392,8 @@ __________________________*/
 .image-wrapper {
     width: 10%;
     padding-left: 1.25rem;
-    margin-bottom: -10%;
+    margin-bottom: -10%; 
+    position: absolute;
     @include desktop {
         margin-bottom: -12%;
         padding-left: .75rem;
@@ -404,7 +405,9 @@ __________________________*/
     border-radius: 50%;
     width: 2.25rem ;
     height: 2.25rem;
-
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
     @include tablet {
         width: 2.875rem;
         height: 2.875rem;
@@ -502,8 +505,8 @@ button {
 .comment-wrapper {
     border-bottom: 1px solid $secondary-colorMercury;
     width:  95%;
-        margin-left: auto;
-        margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
         &__comment {
             padding: 1.25rem;
             padding-left: 1.875rem;
@@ -514,7 +517,6 @@ button {
         }
 
 }
-
 
 
 
