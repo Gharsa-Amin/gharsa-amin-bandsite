@@ -407,6 +407,7 @@ button {
 	background-color: $primary-colorBlack;
 	color: $primary-colorWhite;
 	width: 100%;
+	font-family: "Nunito Sans";
 	@include tablet {
 		min-width: 150px;
 		padding-left: 2rem;
@@ -424,7 +425,6 @@ button {
 	padding: 3rem 3rem;
 	cursor: pointer;
 	font-size: 1.3125rem;
-	font-family: "Open Sans";
 	font-weight: 400;
 	text-decoration: none;
 	display: flex;

@@ -3,8 +3,6 @@ import BandSiteApi from "./band-site-api.js";
 const bandApi = new BandSiteApi("2886777c-3308-49eb-af29-c97d7b690a3e");
 console.log(bandApi);
 
-
-
 async function renderComments() {
 	const comments = await bandApi.getComments();
 	comments.reverse();
@@ -43,13 +41,11 @@ async function renderComments() {
 		commentList.appendChild(commentPart);
 		commentWrapper.appendChild(commentPart);
 		commentList.appendChild(commentWrapper);
-
 		commentSection.prepend(commentList);
 	});
 }
 
 renderComments();
-
 
 const formEl = document.querySelector("#itemForm");
 
